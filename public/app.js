@@ -70,7 +70,6 @@ function renderStatus() {
   const slot = nextSlot();
   const isComplete = !slot;
   $("#player-pool-section").hidden = isComplete;
-  $("#board-section").hidden = !isComplete;
   $("#pick-count").textContent = `${board.picks.length} / ${MOCK_SELECTIONS}`;
   $("#updated-label").textContent = board.updatedAt
     ? `Saved ${new Date(board.updatedAt).toLocaleTimeString([], { hour: "numeric", minute: "2-digit" })}`

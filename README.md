@@ -8,7 +8,8 @@ A separate, shareable NYFL mock-draft site. Every visitor runs an independent mo
 - All 36 locked 2026 keepers and their rounds
 - Browser-local drafting, undo, reset, current clock, recent picks, full board, and team roster selector
 - A fixed-height, internally scrollable available-player pool during the mock
-- An automatic completion view that replaces the player pool with the position-colored full mock board
+- A position-colored full mock board that remains visible at the bottom throughout the draft
+- An automatic completion view that hides the available-player pool while leaving the completed board visible
 - ESPN-only average draft position
 - Raw 2026 projected statistics per game with the provider labeled
 - A Methodology & Sources tab
