@@ -68,6 +68,9 @@ function toast(message, danger = false) {
 
 function renderStatus() {
   const slot = nextSlot();
+  const isComplete = !slot;
+  $("#player-pool-section").hidden = isComplete;
+  $("#board-section").hidden = !isComplete;
   $("#pick-count").textContent = `${board.picks.length} / ${MOCK_SELECTIONS}`;
   $("#updated-label").textContent = board.updatedAt
     ? `Saved ${new Date(board.updatedAt).toLocaleTimeString([], { hour: "numeric", minute: "2-digit" })}`
@@ -190,8 +193,10 @@ function renderBoard() {
   const body = Array.from({ length: ROUNDS }, (_, index) => index + 1).map((round) => `<tr><th>R${round}</th>${board.teams.map((team) => {
     const slot = schedule().find((item) => item.round === round && item.team.id === team.id);
     const keeper = keeperAt(slot), pick = pickAt(slot), onClock = current?.round === round && current.team.id === team.id;
-    if (keeper) return `<td class="keeper"><span>KEEPER</span><strong>${escapeHTML(keeper.player)}</strong><small>Round ${round}</small></td>`;
-    if (pick) return `<td class="selected"><span>#${slot.overall}</span><strong>${escapeHTML(pick.player)}</strong><small>${escapeHTML([pick.pos, pick.nflTeam].filter(Boolean).join(" · "))}</small></td>`;
+    const position = keeper?.pos || pick?.pos || "";
+    const positionClass = position ? ` board-pos-${position}` : "";
+    if (keeper) return `<td class="keeper${positionClass}"><span>KEEPER · ${escapeHTML(position)}</span><strong>${escapeHTML(keeper.player)}</strong><small>Round ${round}</small></td>`;
+    if (pick) return `<td class="selected${positionClass}"><span>#${slot.overall} · ${escapeHTML(position)}</span><strong>${escapeHTML(pick.player)}</strong><small>${escapeHTML(pick.nflTeam)}</small></td>`;
     if (onClock) return `<td class="on-clock"><span>ON CLOCK</span><strong>Overall #${slot.overall}</strong><small>R${round}P${slot.pick}</small></td>`;
     return `<td><span>#${slot.overall}</span><strong>Open</strong><small>R${round}P${slot.pick}</small></td>`;
   }).join("")}</tr>`).join("");

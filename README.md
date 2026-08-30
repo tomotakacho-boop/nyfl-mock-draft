@@ -7,6 +7,8 @@ A separate, shareable NYFL mock-draft site. Every visitor runs an independent mo
 - Official 12-team NYFL draft order
 - All 36 locked 2026 keepers and their rounds
 - Browser-local drafting, undo, reset, current clock, recent picks, full board, and team roster selector
+- A fixed-height, internally scrollable available-player pool during the mock
+- An automatic completion view that replaces the player pool with the position-colored full mock board
 - ESPN-only average draft position
 - Raw 2026 projected statistics per game with the provider labeled
 - A Methodology & Sources tab

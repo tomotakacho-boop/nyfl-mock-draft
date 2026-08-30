@@ -38,6 +38,8 @@ const removedSurfaces = ["Host controls", "Viewer mode", "DRAFT-DAY PRACTICE SCE
 if (removedSurfaces.some((phrase) => markup.includes(phrase) || client.includes(phrase))) throw new Error("An obsolete host or private draft-prep surface remains in the mock site.");
 if (!markup.includes('id="roster-team-select"')) throw new Error("The manager roster selector is missing.");
 if (!markup.includes('data-view="methods"') || !markup.includes('id="methods-view"')) throw new Error("The methodology and sources tab is missing.");
+if (!markup.includes('id="player-pool-section"') || !markup.includes('id="board-section" hidden')) throw new Error("The draft-completion pool/board handoff is missing.");
+if (!client.includes('board-pos-${position}') || !client.includes('$("#player-pool-section").hidden = isComplete')) throw new Error("Position-colored board cells or completion switching are missing.");
 if (markup.includes("/api/board") || client.includes("/api/board")) throw new Error("The browser-local mock still references the old shared-board API.");
 
 const keeperNames = ["Jaxon Smith-Njigba", "Brock Bowers", "Woody Marks"];
