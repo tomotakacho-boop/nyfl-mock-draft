@@ -1,17 +1,10 @@
 {
-  "name": "nyfl-public-live-draft-2026",
+  "name": "nyfl-public-mock-draft-2026",
   "version": "1.0.0",
   "private": true,
   "type": "module",
   "scripts": {
     "build": "node scripts/verify.mjs",
-    "dev": "netlify dev",
     "refresh:players": "node scripts/build-public-player-data.mjs"
-  },
-  "dependencies": {
-    "@netlify/blobs": "^10.0.10"
-  },
-  "devDependencies": {
-    "netlify-cli": "^23.8.1"
   }
 }

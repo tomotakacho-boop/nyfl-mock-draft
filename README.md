@@ -1,29 +1,34 @@
-# NYFL Public Live Draft Board 2026
+# NYFL Public Mock Draft Board 2026
 
-A separate, shareable NYFL draft-night site. Managers can follow the same live board, select their team to inspect its current roster, and see every locked keeper and completed pick.
+A separate, shareable NYFL mock-draft site. Every visitor runs an independent mock in their own browser, can draft for all 12 teams, and can switch the roster view to any manager.
 
-## What is public
+## Included
 
 - Official 12-team NYFL draft order
 - All 36 locked 2026 keepers and their rounds
-- Shared live selections and current draft clock
-- Player identity, position, market ADP, and ESPN raw projected stats per game (with no substituted projection source)
+- Browser-local drafting, undo, reset, current clock, recent picks, full board, and team roster selector
+- ESPN-only average draft position
+- Raw 2026 projected statistics per game with the provider labeled
+- A Methodology & Sources tab
 
 The repository does **not** contain personal notes, watchlist labels, player flags, custom ranks, tiers, deltas, fantasy-point projections, PPG, confidence scores, injury models, availability odds, recommendation logic, simulations, projected paths, or decision-support panels.
 
-## Deploy to a new GitHub repository and Netlify site
+## How mock state works
+
+Selections are saved to the browser’s `localStorage`. There are no host controls, edit keys, server functions, or shared state. Opening the site on another device starts a separate mock draft.
+
+## Deploy to GitHub and Netlify
 
 1. Create a new empty GitHub repository.
 2. Upload the contents of this folder to the repository root.
-3. In Netlify, choose **Add new project → Import an existing project** and select the new repository.
-4. Netlify reads `netlify.toml`; no custom build or publish settings are needed.
-5. In **Project configuration → Environment variables**, add `NYFL_BOARD_EDIT_KEY` with a long private value.
-6. Redeploy, open the site, choose **Host controls**, and enter that same key.
+3. In Netlify, choose **Add new project → Import an existing project** and select the repository.
+4. Netlify reads `netlify.toml`; no environment variables or custom settings are required.
 
-Everyone with the link receives the shared read-only board. Only a browser with the host key can record, undo, or reset selections. Viewers refresh automatically every five seconds, and the draft state persists across deploys.
+## Data methodology
 
-## Local verification
+- ESPN Fantasy Football is the only ADP source. Missing ESPN ADP is displayed as an em dash, never `0.0` and never replaced with another provider.
+- ESPN is the primary provider for raw 2026 projected statistics. FantasyPros raw projections are supported only as an explicitly labeled fallback.
+- Season totals are divided by projected games to produce the compact per-game stat lines.
+- The site does not calculate a private player score from those projections.
 
-Run `npm install` and then `npm run build`. For a local shared-state preview, run `npm run dev` so Netlify Dev supplies the function and local Blobs environment.
-
-`NYFL_BOARD_EDIT_KEY` belongs in Netlify’s environment-variable settings, never in GitHub. `.env.example` shows the variable name without providing a real key.
+Run `npm run build` to verify the upload locally. The site has no runtime dependencies or server functions.

@@ -27,7 +27,7 @@ button, select { cursor: pointer; }
 
 .masthead {
   display: grid;
-  grid-template-columns: 58px minmax(320px, 1fr) auto auto;
+  grid-template-columns: 58px minmax(320px, 1fr) auto;
   align-items: center;
   gap: 18px;
   padding: 22px clamp(18px, 5vw, 72px);
@@ -55,15 +55,12 @@ button, select { cursor: pointer; }
 .live-status > div { display: grid; }
 .live-status b { font-size: 12px; }
 .live-status small { margin-top: 2px; color: #c2d2cc; font-size: 9px; }
-.outline-button, .secondary-button, .primary-button {
+.secondary-button {
   min-height: 40px;
   padding: 10px 15px;
   border: 1px solid;
   font-weight: 800;
 }
-.outline-button { color: white; border-color: #638178; background: transparent; }
-.outline-button:hover, .outline-button.is-unlocked { color: var(--forest); border-color: var(--acid); background: var(--acid); }
-
 .score-strip {
   display: grid;
   grid-template-columns: 1.1fr .9fr .75fr .8fr 1.45fr;
@@ -75,6 +72,26 @@ button, select { cursor: pointer; }
 .score-strip > div:first-child { border-left: 1px solid #d2cbbc; }
 .score-strip span, .player-filters span { color: #6f766f; font-size: 7px; font-weight: 800; letter-spacing: .12em; }
 .score-strip b { font-size: 12px; }
+
+.tab-nav {
+  display: flex;
+  gap: 0;
+  padding: 0 clamp(18px, 5vw, 72px);
+  background: var(--paper);
+  border-bottom: 1px solid var(--line);
+}
+.tab-nav button {
+  min-height: 48px;
+  padding: 12px 20px;
+  color: var(--muted);
+  border: 0;
+  border-bottom: 3px solid transparent;
+  background: transparent;
+  font-size: 10px;
+  font-weight: 800;
+}
+.tab-nav button:hover, .tab-nav button.active { color: var(--forest); border-bottom-color: var(--forest); }
+.tab-view[hidden] { display: none; }
 
 main { padding: 24px clamp(18px, 5vw, 72px) 60px; }
 .eyebrow { margin: 0; color: #346957; }
@@ -141,7 +158,7 @@ h2 { margin: 6px 0; font: 400 clamp(24px, 3vw, 34px) "Libre Caslon Display", Geo
 .player-pool, .board-section, .order-section { margin-top: 26px; border: 1px solid #a6a299; background: var(--paper); }
 .section-heading { display: flex; align-items: flex-end; justify-content: space-between; gap: 20px; padding: 20px 22px; border-bottom: 1px solid var(--line); }
 .section-heading > p { max-width: 500px; margin: 0; color: var(--muted); font-size: 9px; line-height: 1.45; text-align: right; }
-.player-filters { display: grid; grid-template-columns: minmax(300px, 1fr) 145px 150px; border-bottom: 1px solid var(--line); }
+.player-filters { display: grid; grid-template-columns: minmax(300px, 1fr) 170px; border-bottom: 1px solid var(--line); }
 .player-filters > label, .player-filters > div { display: grid; align-content: center; gap: 5px; min-height: 57px; padding: 9px 13px; border-right: 1px solid var(--line); }
 .player-filters input, .player-filters select { width: 100%; border: 0; color: var(--ink); background: transparent; font-size: 10px; font-weight: 700; outline: 0; }
 .player-filters input:focus, .player-filters select:focus { box-shadow: inset 0 -2px var(--forest); }
@@ -176,6 +193,7 @@ h2 { margin: 6px 0; font: 400 clamp(24px, 3vw, 34px) "Libre Caslon Display", Geo
 .espn-stat-line { display: flex; flex-wrap: wrap; gap: 5px 12px; color: #50605a; }
 .espn-stat-line span { white-space: nowrap; }
 .espn-stat-line b { color: var(--forest); font-size: 6px; letter-spacing: .03em; }
+.espn-stat-line em { color: #758079; font-size: 6px; font-style: normal; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; }
 .espn-stat-line .stats-unavailable { color: #8a918d; font-style: italic; }
 .table-footer { display: flex; justify-content: space-between; gap: 20px; padding: 10px 13px; color: var(--muted); background: #f1eee5; font-size: 7px; }
 
@@ -200,17 +218,24 @@ h2 { margin: 6px 0; font: 400 clamp(24px, 3vw, 34px) "Libre Caslon Display", Geo
 .site-footer { display: flex; justify-content: space-between; gap: 20px; padding: 22px clamp(18px,5vw,72px); color: #c5d4ce; background: var(--forest); font-size: 8px; }
 .site-footer span { color: var(--acid); font-weight: 800; letter-spacing: .12em; }.site-footer p { margin: 0; text-align: right; }
 
-dialog { width: min(460px, calc(100vw - 30px)); padding: 0; border: 0; background: transparent; }
-dialog::backdrop { background: rgba(5,25,20,.7); backdrop-filter: blur(3px); }
-dialog form { position: relative; padding: 30px; color: var(--ink); background: var(--paper); border-top: 5px solid var(--acid); }
-dialog h2 { margin: 6px 0; }
-dialog p:not(.eyebrow) { color: var(--muted); font-size: 10px; line-height: 1.5; }
-dialog label { display: grid; gap: 7px; margin: 20px 0; } dialog label span { font-size: 8px; font-weight: 800; }
-dialog input { width: 100%; height: 40px; padding: 8px 10px; border: 1px solid #aaa69d; background: white; outline: 0; }
-dialog input:focus { border-color: var(--forest); box-shadow: 0 0 0 2px var(--acid); }
-.dialog-close { position: absolute; right: 12px; top: 12px; width: 34px; height: 34px; border: 1px solid var(--line); background: white; font-size: 20px; }
-.primary-button { width: 100%; color: var(--forest); border-color: #b2ca47; background: var(--acid); }
-#host-error { display: block; min-height: 16px; margin-top: 10px; color: var(--danger); font-size: 8px; }
+.methods-view { display: grid; gap: 18px; }
+.methods-hero { padding: clamp(24px, 5vw, 52px); color: white; background: var(--forest); border-top: 5px solid var(--acid); }
+.methods-hero .eyebrow { color: var(--acid); }
+.methods-hero h2 { max-width: 900px; margin-top: 10px; color: white; }
+.methods-hero > p:last-child { max-width: 900px; margin: 14px 0 0; color: #c6d7d0; font-size: 11px; line-height: 1.65; }
+.method-summary { display: grid; grid-template-columns: repeat(3, 1fr); border: 1px solid var(--line); background: var(--paper); }
+.method-summary article { min-height: 145px; padding: 22px; border-right: 1px solid var(--line); }
+.method-summary article:last-child { border-right: 0; }
+.method-summary span { color: var(--muted); font-size: 7px; font-weight: 900; letter-spacing: .12em; }
+.method-summary b { display: block; margin-top: 9px; color: var(--forest); font: 700 20px Georgia, serif; }
+.method-summary p, .method-card > p:not(.eyebrow), .source-list p { color: var(--muted); font-size: 10px; line-height: 1.6; }
+.method-card { padding: 24px; border: 1px solid var(--line); background: var(--paper); }
+.method-card code { color: var(--forest); background: #eef3e4; padding: 2px 4px; }
+.source-list { display: grid; border-top: 1px solid var(--line); }
+.source-list article { display: flex; align-items: center; justify-content: space-between; gap: 18px; padding: 16px 0; border-bottom: 1px solid var(--line); }
+.source-list b { color: var(--forest); }
+.source-list p { margin: 4px 0 0; }
+.source-list a, .source-list > article > span { color: var(--forest); font-size: 9px; font-weight: 800; white-space: nowrap; }
 .toast { position: fixed; right: 20px; bottom: 20px; z-index: 50; max-width: 380px; padding: 12px 16px; color: white; background: var(--forest); font-size: 9px; box-shadow: 0 8px 24px rgba(0,0,0,.2); opacity: 0; transform: translateY(10px); pointer-events: none; transition: .2s; }
 .toast.is-visible { opacity: 1; transform: none; }.toast.is-danger { background: var(--danger); }
 
@@ -222,7 +247,7 @@ dialog input:focus { border-color: var(--forest); box-shadow: 0 0 0 2px var(--ac
 }
 
 @media (max-width: 760px) {
-  .masthead { grid-template-columns: 45px 1fr; padding: 16px; }.brand-mark { width: 42px; height: 42px; }.brand-copy h1 { font-size: 28px; }.masthead > .outline-button { grid-column: 1 / -1; }
+  .masthead { grid-template-columns: 45px 1fr; padding: 16px; }.brand-mark { width: 42px; height: 42px; }.brand-copy h1 { font-size: 28px; }
   .score-strip { grid-template-columns: 1fr 1fr; padding: 0; }.score-strip > div { padding: 12px; }.score-strip b { font-size: 10px; }
   main { padding: 16px 11px 40px; }
   .live-roster-bar { position: sticky; grid-template-columns: 1fr; }.live-roster-bar > header { grid-template-columns: 1fr; }.roster-cells { grid-template-columns: repeat(2, minmax(105px, 1fr)); max-height: 140px; overflow: auto; }
@@ -232,4 +257,7 @@ dialog input:focus { border-color: var(--forest); box-shadow: 0 0 0 2px var(--ac
   .player-filters { grid-template-columns: 1fr 1fr; }.player-filters .search-box { grid-column: 1 / -1; }
   .order-grid { grid-template-columns: 1fr; }.site-footer { align-items: flex-start; flex-direction: column; }.site-footer p { text-align: left; }
   .table-footer { align-items: flex-start; flex-direction: column; }
+  .tab-nav { padding: 0 10px; overflow-x: auto; }.tab-nav button { white-space: nowrap; }
+  .method-summary { grid-template-columns: 1fr; }.method-summary article { border-right: 0; border-bottom: 1px solid var(--line); }
+  .source-list article { align-items: flex-start; flex-direction: column; }
 }

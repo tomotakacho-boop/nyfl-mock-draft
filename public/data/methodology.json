@@ -1,0 +1,27 @@
+{
+  "asOf": "2026-08-30T07:12:19.277Z",
+  "season": 2026,
+  "playerCount": 402,
+  "espnAdpCount": 384,
+  "projectionProviderCounts": {
+    "ESPN": 377,
+    "Unavailable": 25
+  },
+  "sources": [
+    {
+      "name": "ESPN Fantasy Football",
+      "purpose": "Only source used for ADP; primary raw 2026 statistical projections",
+      "url": "https://fantasy.espn.com/football/livedraftresults"
+    },
+    {
+      "name": "FantasyPros 2026 projections",
+      "purpose": "Fallback raw statistical projections only when an ESPN projection is unavailable",
+      "url": "https://www.fantasypros.com/nfl/projections/leaders.php"
+    },
+    {
+      "name": "NYFL league records",
+      "purpose": "Official 2026 draft order and 36 locked keepers supplied by the league",
+      "url": null
+    }
+  ]
+}

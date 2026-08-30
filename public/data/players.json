@@ -4,8 +4,9 @@
     "name": "Jahmyr Gibbs",
     "team": "DET",
     "pos": "RB",
-    "adp": 1.4,
-    "espnPerGame": {
+    "adp": 1.39,
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -40,8 +41,9 @@
     "name": "Bijan Robinson",
     "team": "ATL",
     "pos": "RB",
-    "adp": 2.43,
-    "espnPerGame": {
+    "adp": 2.42,
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -76,8 +78,9 @@
     "name": "Christian McCaffrey",
     "team": "SF",
     "pos": "RB",
-    "adp": 7.41,
-    "espnPerGame": {
+    "adp": 7.52,
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -112,8 +115,9 @@
     "name": "Jonathan Taylor",
     "team": "IND",
     "pos": "RB",
-    "adp": 7.24,
-    "espnPerGame": {
+    "adp": 6.96,
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -148,8 +152,9 @@
     "name": "Jaxon Smith-Njigba",
     "team": "SEA",
     "pos": "WR",
-    "adp": 5.81,
-    "espnPerGame": {
+    "adp": 5.94,
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -184,8 +189,9 @@
     "name": "Ja'Marr Chase",
     "team": "CIN",
     "pos": "WR",
-    "adp": 4.06,
-    "espnPerGame": {
+    "adp": 4.15,
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -220,8 +226,9 @@
     "name": "James Cook III",
     "team": "BUF",
     "pos": "RB",
-    "adp": 11.79,
-    "espnPerGame": {
+    "adp": 11.37,
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -256,8 +263,9 @@
     "name": "Puka Nacua",
     "team": "LAR",
     "pos": "WR",
-    "adp": 5.23,
-    "espnPerGame": {
+    "adp": 5.27,
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -292,8 +300,9 @@
     "name": "Amon-Ra St. Brown",
     "team": "DET",
     "pos": "WR",
-    "adp": 8.24,
-    "espnPerGame": {
+    "adp": 8.28,
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -328,8 +337,9 @@
     "name": "De'Von Achane",
     "team": "MIA",
     "pos": "RB",
-    "adp": 11.98,
-    "espnPerGame": {
+    "adp": 12.03,
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -364,8 +374,9 @@
     "name": "CeeDee Lamb",
     "team": "DAL",
     "pos": "WR",
-    "adp": 10.92,
-    "espnPerGame": {
+    "adp": 11.17,
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -400,8 +411,9 @@
     "name": "Saquon Barkley",
     "team": "PHI",
     "pos": "RB",
-    "adp": 15.06,
-    "espnPerGame": {
+    "adp": 14.77,
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -436,8 +448,9 @@
     "name": "Chase Brown",
     "team": "CIN",
     "pos": "RB",
-    "adp": 20.65,
-    "espnPerGame": {
+    "adp": 19.63,
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -472,8 +485,9 @@
     "name": "Justin Jefferson",
     "team": "MIN",
     "pos": "WR",
-    "adp": 12.21,
-    "espnPerGame": {
+    "adp": 12.37,
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -508,8 +522,9 @@
     "name": "Derrick Henry",
     "team": "BAL",
     "pos": "RB",
-    "adp": 18.17,
-    "espnPerGame": {
+    "adp": 17.76,
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -544,8 +559,9 @@
     "name": "Omarion Hampton",
     "team": "LAC",
     "pos": "RB",
-    "adp": 23.68,
-    "espnPerGame": {
+    "adp": 22.4,
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -580,8 +596,9 @@
     "name": "Ashton Jeanty",
     "team": "LV",
     "pos": "RB",
-    "adp": 18.75,
-    "espnPerGame": {
+    "adp": 19.8,
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -616,8 +633,9 @@
     "name": "Kenneth Walker III",
     "team": "KC",
     "pos": "RB",
-    "adp": 22.94,
-    "espnPerGame": {
+    "adp": 23.59,
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -652,8 +670,9 @@
     "name": "Drake London",
     "team": "ATL",
     "pos": "WR",
-    "adp": 18.87,
-    "espnPerGame": {
+    "adp": 19.24,
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -688,8 +707,9 @@
     "name": "A.J. Brown",
     "team": "NE",
     "pos": "WR",
-    "adp": 25.27,
-    "espnPerGame": {
+    "adp": 24.14,
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -724,8 +744,9 @@
     "name": "Nico Collins",
     "team": "HOU",
     "pos": "WR",
-    "adp": 26.52,
-    "espnPerGame": {
+    "adp": 26.35,
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -760,8 +781,9 @@
     "name": "Javonte Williams",
     "team": "DAL",
     "pos": "RB",
-    "adp": 34.75,
-    "espnPerGame": {
+    "adp": 34.55,
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -796,8 +818,9 @@
     "name": "Kyren Williams",
     "team": "LAR",
     "pos": "RB",
-    "adp": 40.19,
-    "espnPerGame": {
+    "adp": 39.26,
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -832,8 +855,9 @@
     "name": "Chris Olave",
     "team": "NO",
     "pos": "WR",
-    "adp": 30.65,
-    "espnPerGame": {
+    "adp": 30.38,
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -868,8 +892,9 @@
     "name": "Brock Bowers",
     "team": "LV",
     "pos": "TE",
-    "adp": 24.25,
-    "espnPerGame": {
+    "adp": 24.16,
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -904,8 +929,9 @@
     "name": "George Pickens",
     "team": "DAL",
     "pos": "WR",
-    "adp": 30.11,
-    "espnPerGame": {
+    "adp": 29.55,
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -940,8 +966,9 @@
     "name": "Rashee Rice",
     "team": "KC",
     "pos": "WR",
-    "adp": 23.79,
-    "espnPerGame": {
+    "adp": 25.32,
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -976,8 +1003,9 @@
     "name": "Travis Etienne Jr.",
     "team": "NO",
     "pos": "RB",
-    "adp": 43.26,
-    "espnPerGame": {
+    "adp": 43.28,
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -1012,8 +1040,9 @@
     "name": "Trey McBride",
     "team": "ARI",
     "pos": "TE",
-    "adp": 21.17,
-    "espnPerGame": {
+    "adp": 21.55,
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -1048,8 +1077,9 @@
     "name": "Josh Allen",
     "team": "BUF",
     "pos": "QB",
-    "adp": 21.41,
-    "espnPerGame": {
+    "adp": 20.77,
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": 29.9,
       "completions": 20,
       "passYards": 232.1,
@@ -1084,8 +1114,9 @@
     "name": "D'Andre Swift",
     "team": "CHI",
     "pos": "RB",
-    "adp": 61.16,
-    "espnPerGame": {
+    "adp": 59.22,
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -1120,8 +1151,9 @@
     "name": "Malik Nabers",
     "team": "NYG",
     "pos": "WR",
-    "adp": 33.97,
-    "espnPerGame": {
+    "adp": 34.28,
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -1156,8 +1188,9 @@
     "name": "Josh Jacobs",
     "team": "GB",
     "pos": "RB",
-    "adp": 37.73,
-    "espnPerGame": {
+    "adp": 38.58,
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -1192,8 +1225,9 @@
     "name": "DeVonta Smith",
     "team": "PHI",
     "pos": "WR",
-    "adp": 39.59,
-    "espnPerGame": {
+    "adp": 39.01,
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -1228,8 +1262,9 @@
     "name": "Breece Hall",
     "team": "NYJ",
     "pos": "RB",
-    "adp": 34.2,
-    "espnPerGame": {
+    "adp": 34.83,
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -1264,8 +1299,9 @@
     "name": "Tee Higgins",
     "team": "CIN",
     "pos": "WR",
-    "adp": 54.01,
-    "espnPerGame": {
+    "adp": 53.26,
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -1300,8 +1336,9 @@
     "name": "Zay Flowers",
     "team": "BAL",
     "pos": "WR",
-    "adp": 41.77,
-    "espnPerGame": {
+    "adp": 42.68,
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -1336,8 +1373,9 @@
     "name": "Jeremiyah Love",
     "team": "ARI",
     "pos": "RB",
-    "adp": 23.68,
-    "espnPerGame": {
+    "adp": 24.45,
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -1372,8 +1410,9 @@
     "name": "Tetairoa McMillan",
     "team": "CAR",
     "pos": "WR",
-    "adp": 41.44,
-    "espnPerGame": {
+    "adp": 41.64,
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -1408,8 +1447,9 @@
     "name": "Garrett Wilson",
     "team": "NYJ",
     "pos": "WR",
-    "adp": 36.42,
-    "espnPerGame": {
+    "adp": 36.72,
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -1444,8 +1484,9 @@
     "name": "Jaylen Waddle",
     "team": "DEN",
     "pos": "WR",
-    "adp": 55.11,
-    "espnPerGame": {
+    "adp": 54.32,
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -1480,8 +1521,9 @@
     "name": "Bucky Irving",
     "team": "TB",
     "pos": "RB",
-    "adp": 54.45,
-    "espnPerGame": {
+    "adp": 55.58,
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -1516,8 +1558,9 @@
     "name": "Quinshon Judkins",
     "team": "CLE",
     "pos": "RB",
-    "adp": 53.16,
-    "espnPerGame": {
+    "adp": 52.54,
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -1552,8 +1595,9 @@
     "name": "Davante Adams",
     "team": "LAR",
     "pos": "WR",
-    "adp": 46.08,
-    "espnPerGame": {
+    "adp": 46.28,
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -1588,8 +1632,9 @@
     "name": "Ladd McConkey",
     "team": "LAC",
     "pos": "WR",
-    "adp": 49.18,
-    "espnPerGame": {
+    "adp": 48.47,
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -1624,8 +1669,9 @@
     "name": "Bhayshul Tuten",
     "team": "JAC",
     "pos": "RB",
-    "adp": 69.68,
-    "espnPerGame": {
+    "adp": 67.98,
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -1660,8 +1706,9 @@
     "name": "David Montgomery",
     "team": "HOU",
     "pos": "RB",
-    "adp": 67.74,
-    "espnPerGame": {
+    "adp": 66.65,
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -1696,8 +1743,9 @@
     "name": "Jameson Williams",
     "team": "DET",
     "pos": "WR",
-    "adp": 66.11,
-    "espnPerGame": {
+    "adp": 65.82,
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -1732,8 +1780,9 @@
     "name": "Colston Loveland",
     "team": "CHI",
     "pos": "TE",
-    "adp": 44.41,
-    "espnPerGame": {
+    "adp": 43.96,
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -1768,8 +1817,9 @@
     "name": "Emeka Egbuka",
     "team": "TB",
     "pos": "WR",
-    "adp": 47.25,
-    "espnPerGame": {
+    "adp": 46.74,
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -1804,8 +1854,9 @@
     "name": "Cam Skattebo",
     "team": "NYG",
     "pos": "RB",
-    "adp": 44.58,
-    "espnPerGame": {
+    "adp": 45.09,
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -1840,8 +1891,9 @@
     "name": "TreVeyon Henderson",
     "team": "NE",
     "pos": "RB",
-    "adp": 78.4,
-    "espnPerGame": {
+    "adp": 78.98,
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -1876,8 +1928,9 @@
     "name": "Jadarian Price",
     "team": "SEA",
     "pos": "RB",
-    "adp": 73.79,
-    "espnPerGame": {
+    "adp": 72.76,
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -1912,8 +1965,9 @@
     "name": "Terry McLaurin",
     "team": "WAS",
     "pos": "WR",
-    "adp": 59.93,
-    "espnPerGame": {
+    "adp": 60.5,
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -1948,8 +2002,9 @@
     "name": "Lamar Jackson",
     "team": "BAL",
     "pos": "QB",
-    "adp": 37.88,
-    "espnPerGame": {
+    "adp": 37.03,
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": 27.4,
       "completions": 17.8,
       "passYards": 228.7,
@@ -1984,8 +2039,9 @@
     "name": "Rome Odunze",
     "team": "CHI",
     "pos": "WR",
-    "adp": 64.2,
-    "espnPerGame": {
+    "adp": 64.6,
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -2020,8 +2076,9 @@
     "name": "Luther Burden III",
     "team": "CHI",
     "pos": "WR",
-    "adp": 76.22,
-    "espnPerGame": {
+    "adp": 76.46,
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -2056,8 +2113,9 @@
     "name": "Jonathon Brooks",
     "team": "CAR",
     "pos": "RB",
-    "adp": 112.38,
-    "espnPerGame": {
+    "adp": 110.64,
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -2092,8 +2150,9 @@
     "name": "DJ Moore",
     "team": "BUF",
     "pos": "WR",
-    "adp": 62.28,
-    "espnPerGame": {
+    "adp": 62.55,
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -2128,8 +2187,9 @@
     "name": "Rhamondre Stevenson",
     "team": "NE",
     "pos": "RB",
-    "adp": 82.5,
-    "espnPerGame": {
+    "adp": 82.16,
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -2164,8 +2224,9 @@
     "name": "Drake Maye",
     "team": "NE",
     "pos": "QB",
-    "adp": 47.46,
-    "espnPerGame": {
+    "adp": 47.48,
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": 30.6,
       "completions": 20.9,
       "passYards": 240.9,
@@ -2200,8 +2261,9 @@
     "name": "Carnell Tate",
     "team": "TEN",
     "pos": "WR",
-    "adp": 77.3,
-    "espnPerGame": {
+    "adp": 77.36,
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -2236,8 +2298,9 @@
     "name": "Jaylen Warren",
     "team": "PIT",
     "pos": "RB",
-    "adp": 95.11,
-    "espnPerGame": {
+    "adp": 93.67,
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -2272,8 +2335,9 @@
     "name": "Christian Watson",
     "team": "GB",
     "pos": "WR",
-    "adp": 93.56,
-    "espnPerGame": {
+    "adp": 92.84,
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -2308,8 +2372,9 @@
     "name": "Tony Pollard",
     "team": "TEN",
     "pos": "RB",
-    "adp": 101.73,
-    "espnPerGame": {
+    "adp": 98.72,
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -2344,8 +2409,9 @@
     "name": "Jayden Daniels",
     "team": "WAS",
     "pos": "QB",
-    "adp": 51.48,
-    "espnPerGame": {
+    "adp": 51.87,
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": 30.5,
       "completions": 20.4,
       "passYards": 226.5,
@@ -2380,8 +2446,9 @@
     "name": "Joe Burrow",
     "team": "CIN",
     "pos": "QB",
-    "adp": 57.52,
-    "espnPerGame": {
+    "adp": 56.49,
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": 33.6,
       "completions": 22.8,
       "passYards": 243,
@@ -2416,8 +2483,9 @@
     "name": "Tyler Warren",
     "team": "IND",
     "pos": "TE",
-    "adp": 50.98,
-    "espnPerGame": {
+    "adp": 51.35,
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -2452,8 +2520,9 @@
     "name": "Jalen Hurts",
     "team": "PHI",
     "pos": "QB",
-    "adp": 52.05,
-    "espnPerGame": {
+    "adp": 52.76,
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": 29.4,
       "completions": 19.3,
       "passYards": 222.3,
@@ -2488,8 +2557,9 @@
     "name": "Mike Evans",
     "team": "SF",
     "pos": "WR",
-    "adp": 91.47,
-    "espnPerGame": {
+    "adp": 89.86,
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -2524,8 +2594,9 @@
     "name": "Parker Washington",
     "team": "JAC",
     "pos": "WR",
-    "adp": 92.62,
-    "espnPerGame": {
+    "adp": 92.32,
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -2560,8 +2631,9 @@
     "name": "Marvin Harrison Jr.",
     "team": "ARI",
     "pos": "WR",
-    "adp": 83.35,
-    "espnPerGame": {
+    "adp": 82.29,
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -2596,8 +2668,9 @@
     "name": "Brian Thomas Jr.",
     "team": "JAC",
     "pos": "WR",
-    "adp": 105.34,
-    "espnPerGame": {
+    "adp": 107.86,
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -2632,8 +2705,9 @@
     "name": "Rico Dowdle",
     "team": "PIT",
     "pos": "RB",
-    "adp": 101.03,
-    "espnPerGame": {
+    "adp": 99.62,
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -2668,8 +2742,9 @@
     "name": "DK Metcalf",
     "team": "PIT",
     "pos": "WR",
-    "adp": 85.9,
-    "espnPerGame": {
+    "adp": 85.91,
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -2704,8 +2779,9 @@
     "name": "Trevor Lawrence",
     "team": "JAC",
     "pos": "QB",
-    "adp": 93.63,
-    "espnPerGame": {
+    "adp": 94.9,
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": 32.9,
       "completions": 20.4,
       "passYards": 231.3,
@@ -2740,8 +2816,9 @@
     "name": "J.K. Dobbins",
     "team": "DEN",
     "pos": "RB",
-    "adp": 114.62,
-    "espnPerGame": {
+    "adp": 114.16,
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -2776,8 +2853,9 @@
     "name": "Caleb Williams",
     "team": "CHI",
     "pos": "QB",
-    "adp": 92.46,
-    "espnPerGame": {
+    "adp": 92.53,
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": 31.1,
       "completions": 18.6,
       "passYards": 224.8,
@@ -2812,8 +2890,9 @@
     "name": "Tucker Kraft",
     "team": "GB",
     "pos": "TE",
-    "adp": 89.37,
-    "espnPerGame": {
+    "adp": 89.94,
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -2848,8 +2927,9 @@
     "name": "Courtland Sutton",
     "team": "DEN",
     "pos": "WR",
-    "adp": 79.98,
-    "espnPerGame": {
+    "adp": 80.58,
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -2884,8 +2964,9 @@
     "name": "Harold Fannin Jr.",
     "team": "CLE",
     "pos": "TE",
-    "adp": 74,
-    "espnPerGame": {
+    "adp": 73.2,
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -2920,8 +3001,9 @@
     "name": "Blake Corum",
     "team": "LAR",
     "pos": "RB",
-    "adp": 132.7,
-    "espnPerGame": {
+    "adp": 131.07,
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -2956,8 +3038,9 @@
     "name": "Sam LaPorta",
     "team": "DET",
     "pos": "TE",
-    "adp": 71.92,
-    "espnPerGame": {
+    "adp": 72.23,
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -2992,8 +3075,9 @@
     "name": "Kyle Pitts Sr.",
     "team": "ATL",
     "pos": "TE",
-    "adp": 65.83,
-    "espnPerGame": {
+    "adp": 66.58,
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -3028,8 +3112,9 @@
     "name": "Quentin Johnston",
     "team": "LAC",
     "pos": "WR",
-    "adp": 135.6,
-    "espnPerGame": {
+    "adp": 133.68,
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -3064,8 +3149,9 @@
     "name": "Chris Godwin Jr.",
     "team": "TB",
     "pos": "WR",
-    "adp": 137.12,
-    "espnPerGame": {
+    "adp": 133.3,
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -3100,8 +3186,9 @@
     "name": "Jordan Addison",
     "team": "MIN",
     "pos": "WR",
-    "adp": 115.56,
-    "espnPerGame": {
+    "adp": 117.2,
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -3136,8 +3223,9 @@
     "name": "Michael Pittman Jr.",
     "team": "PIT",
     "pos": "WR",
-    "adp": 90.36,
-    "espnPerGame": {
+    "adp": 90.4,
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -3172,8 +3260,9 @@
     "name": "Dak Prescott",
     "team": "DAL",
     "pos": "QB",
-    "adp": 81.84,
-    "espnPerGame": {
+    "adp": 79,
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": 32.5,
       "completions": 21.8,
       "passYards": 241.9,
@@ -3208,8 +3297,9 @@
     "name": "Jordan Mason",
     "team": "MIN",
     "pos": "RB",
-    "adp": 138.77,
-    "espnPerGame": {
+    "adp": 139.08,
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -3244,8 +3334,9 @@
     "name": "Justin Herbert",
     "team": "LAC",
     "pos": "QB",
-    "adp": 101.52,
-    "espnPerGame": {
+    "adp": 97.4,
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": 31,
       "completions": 20.3,
       "passYards": 226.5,
@@ -3280,8 +3371,9 @@
     "name": "Jacory Croskey-Merritt",
     "team": "WAS",
     "pos": "RB",
-    "adp": 132.39,
-    "espnPerGame": {
+    "adp": 133.83,
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -3316,8 +3408,9 @@
     "name": "Chuba Hubbard",
     "team": "CAR",
     "pos": "RB",
-    "adp": 117.89,
-    "espnPerGame": {
+    "adp": 114.95,
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -3352,8 +3445,9 @@
     "name": "Rachaad White",
     "team": "WAS",
     "pos": "RB",
-    "adp": 132.55,
-    "espnPerGame": {
+    "adp": 130.27,
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -3388,8 +3482,9 @@
     "name": "George Kittle",
     "team": "SF",
     "pos": "TE",
-    "adp": 88.37,
-    "espnPerGame": {
+    "adp": 84.77,
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -3424,8 +3519,9 @@
     "name": "Kenny Gainwell",
     "team": "TB",
     "pos": "RB",
-    "adp": 112.89,
-    "espnPerGame": {
+    "adp": 110.15,
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -3460,8 +3556,9 @@
     "name": "Jaxson Dart",
     "team": "NYG",
     "pos": "QB",
-    "adp": 77.85,
-    "espnPerGame": {
+    "adp": 79.4,
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": 29.6,
       "completions": 19.2,
       "passYards": 216.8,
@@ -3496,8 +3593,9 @@
     "name": "RJ Harvey",
     "team": "DEN",
     "pos": "RB",
-    "adp": 134.34,
-    "espnPerGame": {
+    "adp": 131.91,
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -3532,8 +3630,9 @@
     "name": "Makai Lemon",
     "team": "PHI",
     "pos": "WR",
-    "adp": 138.56,
-    "espnPerGame": {
+    "adp": 136.84,
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -3568,8 +3667,9 @@
     "name": "Brock Purdy",
     "team": "SF",
     "pos": "QB",
-    "adp": 104.24,
-    "espnPerGame": {
+    "adp": 105.79,
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": 31.2,
       "completions": 20.7,
       "passYards": 245.9,
@@ -3604,8 +3704,9 @@
     "name": "Stefon Diggs",
     "team": "WAS",
     "pos": "WR",
-    "adp": 120.49,
-    "espnPerGame": {
+    "adp": 115.59,
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -3640,8 +3741,9 @@
     "name": "Michael Wilson",
     "team": "ARI",
     "pos": "WR",
-    "adp": 102.43,
-    "espnPerGame": {
+    "adp": 102.4,
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -3676,8 +3778,9 @@
     "name": "Alec Pierce",
     "team": "IND",
     "pos": "WR",
-    "adp": 103.01,
-    "espnPerGame": {
+    "adp": 104.94,
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -3712,8 +3815,9 @@
     "name": "Bo Nix",
     "team": "DEN",
     "pos": "QB",
-    "adp": 90.21,
-    "espnPerGame": {
+    "adp": 93.27,
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": 33.2,
       "completions": 21.4,
       "passYards": 228.1,
@@ -3748,8 +3852,9 @@
     "name": "Wan'Dale Robinson",
     "team": "TEN",
     "pos": "WR",
-    "adp": 113.61,
-    "espnPerGame": {
+    "adp": 114.35,
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -3784,8 +3889,9 @@
     "name": "Aaron Jones Sr.",
     "team": "MIN",
     "pos": "RB",
-    "adp": 127.17,
-    "espnPerGame": {
+    "adp": 123.61,
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -3820,8 +3926,9 @@
     "name": "Kyle Monangai",
     "team": "CHI",
     "pos": "RB",
-    "adp": 126.3,
-    "espnPerGame": {
+    "adp": 125.63,
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -3856,8 +3963,9 @@
     "name": "Patrick Mahomes II",
     "team": "KC",
     "pos": "QB",
-    "adp": 106.75,
-    "espnPerGame": {
+    "adp": 106.94,
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": 32.4,
       "completions": 21.1,
       "passYards": 235.3,
@@ -3892,8 +4000,9 @@
     "name": "Jayden Reed",
     "team": "GB",
     "pos": "WR",
-    "adp": 128.07,
-    "espnPerGame": {
+    "adp": 131.59,
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -3928,8 +4037,9 @@
     "name": "Travis Kelce",
     "team": "KC",
     "pos": "TE",
-    "adp": 96.29,
-    "espnPerGame": {
+    "adp": 96.02,
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -3964,8 +4074,9 @@
     "name": "Matthew Stafford",
     "team": "LAR",
     "pos": "QB",
-    "adp": 83.56,
-    "espnPerGame": {
+    "adp": 86.08,
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": 32.8,
       "completions": 20.9,
       "passYards": 251.9,
@@ -4000,8 +4111,9 @@
     "name": "Xavier Worthy",
     "team": "KC",
     "pos": "WR",
-    "adp": 124.96,
-    "espnPerGame": {
+    "adp": 126.6,
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -4036,8 +4148,9 @@
     "name": "Jakobi Meyers",
     "team": "JAC",
     "pos": "WR",
-    "adp": 115.51,
-    "espnPerGame": {
+    "adp": 118.13,
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -4072,8 +4185,9 @@
     "name": "Josh Downs",
     "team": "IND",
     "pos": "WR",
-    "adp": 136.23,
-    "espnPerGame": {
+    "adp": 136.59,
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -4108,8 +4222,9 @@
     "name": "KC Concepcion",
     "team": "CLE",
     "pos": "WR",
-    "adp": 144.7,
-    "espnPerGame": {
+    "adp": 145.42,
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -4144,8 +4259,9 @@
     "name": "Dallas Goedert",
     "team": "PHI",
     "pos": "TE",
-    "adp": 99.87,
-    "espnPerGame": {
+    "adp": 101.49,
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -4180,8 +4296,9 @@
     "name": "Jared Goff",
     "team": "DET",
     "pos": "QB",
-    "adp": 136.57,
-    "espnPerGame": {
+    "adp": 136.27,
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": 32,
       "completions": 21.8,
       "passYards": 248,
@@ -4216,8 +4333,9 @@
     "name": "Dalton Kincaid",
     "team": "BUF",
     "pos": "TE",
-    "adp": 131.22,
-    "espnPerGame": {
+    "adp": 131.2,
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -4252,8 +4370,9 @@
     "name": "Matthew Golden",
     "team": "GB",
     "pos": "WR",
-    "adp": 104.17,
-    "espnPerGame": {
+    "adp": 106.67,
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -4288,8 +4407,9 @@
     "name": "Woody Marks",
     "team": "HOU",
     "pos": "RB",
-    "adp": 148.85,
-    "espnPerGame": {
+    "adp": 149.76,
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -4324,8 +4444,9 @@
     "name": "Isaiah Likely",
     "team": "NYG",
     "pos": "TE",
-    "adp": 126.33,
-    "espnPerGame": {
+    "adp": 125.43,
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -4360,8 +4481,9 @@
     "name": "Mark Andrews",
     "team": "BAL",
     "pos": "TE",
-    "adp": 122.17,
-    "espnPerGame": {
+    "adp": 123.45,
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -4396,8 +4518,9 @@
     "name": "Tyjae Spears",
     "team": "TEN",
     "pos": "RB",
-    "adp": 155.51,
-    "espnPerGame": {
+    "adp": 152.39,
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -4432,8 +4555,9 @@
     "name": "Romeo Doubs",
     "team": "NE",
     "pos": "WR",
-    "adp": 149.72,
-    "espnPerGame": {
+    "adp": 149.29,
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -4468,8 +4592,9 @@
     "name": "Baker Mayfield",
     "team": "TB",
     "pos": "QB",
-    "adp": 147.39,
-    "espnPerGame": {
+    "adp": 146.67,
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": 31,
       "completions": 19.9,
       "passYards": 224.9,
@@ -4504,8 +4629,9 @@
     "name": "Chris Rodriguez Jr.",
     "team": "JAC",
     "pos": "RB",
-    "adp": 165.26,
-    "espnPerGame": {
+    "adp": 165.11,
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -4540,8 +4666,9 @@
     "name": "Tyler Allgeier",
     "team": "ARI",
     "pos": "RB",
-    "adp": 163.28,
-    "espnPerGame": {
+    "adp": 163.08,
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -4576,8 +4703,9 @@
     "name": "Jordan Love",
     "team": "GB",
     "pos": "QB",
-    "adp": 157.48,
-    "espnPerGame": {
+    "adp": 156.76,
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": 31.3,
       "completions": 20.1,
       "passYards": 234.7,
@@ -4612,8 +4740,9 @@
     "name": "Jalen Coker",
     "team": "CAR",
     "pos": "WR",
-    "adp": 158.12,
-    "espnPerGame": {
+    "adp": 157.4,
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -4648,8 +4777,9 @@
     "name": "Kyler Murray",
     "team": "MIN",
     "pos": "QB",
-    "adp": 144.23,
-    "espnPerGame": {
+    "adp": 142.6,
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": 28.8,
       "completions": 19.5,
       "passYards": 196.9,
@@ -4684,8 +4814,9 @@
     "name": "Jake Ferguson",
     "team": "DAL",
     "pos": "TE",
-    "adp": 110.45,
-    "espnPerGame": {
+    "adp": 109.9,
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -4720,8 +4851,9 @@
     "name": "Tyler Shough",
     "team": "NO",
     "pos": "QB",
-    "adp": 154.58,
-    "espnPerGame": {
+    "adp": 153.92,
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": 32.1,
       "completions": 20.9,
       "passYards": 228.6,
@@ -4756,8 +4888,9 @@
     "name": "Khalil Shakir",
     "team": "BUF",
     "pos": "WR",
-    "adp": 128.41,
-    "espnPerGame": {
+    "adp": 132.49,
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -4792,8 +4925,9 @@
     "name": "Deebo Samuel Sr.",
     "team": "SF",
     "pos": "WR",
-    "adp": 133.05,
-    "espnPerGame": {
+    "adp": 135.78,
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -4828,8 +4962,9 @@
     "name": "Keaton Mitchell",
     "team": "LAC",
     "pos": "RB",
-    "adp": 168.97,
-    "espnPerGame": {
+    "adp": 169.11,
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -4864,8 +4999,9 @@
     "name": "Isiah Pacheco",
     "team": "DET",
     "pos": "RB",
-    "adp": 161.96,
-    "espnPerGame": {
+    "adp": 160.5,
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -4900,8 +5036,9 @@
     "name": "Rashid Shaheed",
     "team": "SEA",
     "pos": "WR",
-    "adp": 156.1,
-    "espnPerGame": {
+    "adp": 157.44,
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -4936,8 +5073,9 @@
     "name": "Tank Bigsby",
     "team": "PHI",
     "pos": "RB",
-    "adp": 169.29,
-    "espnPerGame": {
+    "adp": 169.48,
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -4972,8 +5110,9 @@
     "name": "Juwan Johnson",
     "team": "NO",
     "pos": "TE",
-    "adp": 161.95,
-    "espnPerGame": {
+    "adp": 161.03,
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -5008,8 +5147,9 @@
     "name": "Jonah Coleman",
     "team": "DEN",
     "pos": "RB",
-    "adp": 169.4,
-    "espnPerGame": {
+    "adp": 169.43,
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -5044,8 +5184,9 @@
     "name": "Hunter Henry",
     "team": "NE",
     "pos": "TE",
-    "adp": 145.46,
-    "espnPerGame": {
+    "adp": 147.62,
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -5080,8 +5221,9 @@
     "name": "De'Zhaun Stribling",
     "team": "SF",
     "pos": "WR",
-    "adp": 146.96,
-    "espnPerGame": {
+    "adp": 145.38,
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -5116,8 +5258,9 @@
     "name": "Dylan Sampson",
     "team": "CLE",
     "pos": "RB",
-    "adp": 170.35,
-    "espnPerGame": {
+    "adp": 169.87,
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -5152,8 +5295,9 @@
     "name": "Malik Willis",
     "team": "MIA",
     "pos": "QB",
-    "adp": 166.96,
-    "espnPerGame": {
+    "adp": 167.16,
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": 29.7,
       "completions": 19,
       "passYards": 209.4,
@@ -5188,8 +5332,9 @@
     "name": "MarShawn Lloyd",
     "team": "GB",
     "pos": "RB",
-    "adp": 167.78,
-    "espnPerGame": {
+    "adp": 165.69,
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -5224,8 +5369,9 @@
     "name": "Brian Robinson Jr.",
     "team": "ATL",
     "pos": "RB",
-    "adp": 165.32,
-    "espnPerGame": {
+    "adp": 166.05,
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -5260,8 +5406,9 @@
     "name": "Sam Darnold",
     "team": "SEA",
     "pos": "QB",
-    "adp": 162.3,
-    "espnPerGame": {
+    "adp": 162.18,
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": 30.2,
       "completions": 19.7,
       "passYards": 236.1,
@@ -5296,8 +5443,9 @@
     "name": "C.J. Stroud",
     "team": "HOU",
     "pos": "QB",
-    "adp": 165.35,
-    "espnPerGame": {
+    "adp": 165.22,
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": 32.4,
       "completions": 20.7,
       "passYards": 232.4,
@@ -5332,8 +5480,9 @@
     "name": "Chig Okonkwo",
     "team": "WAS",
     "pos": "TE",
-    "adp": 169.92,
-    "espnPerGame": {
+    "adp": 169.99,
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -5368,8 +5517,9 @@
     "name": "Dalton Schultz",
     "team": "HOU",
     "pos": "TE",
-    "adp": 168.24,
-    "espnPerGame": {
+    "adp": 168.34,
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -5404,8 +5554,9 @@
     "name": "Adonai Mitchell",
     "team": "NYJ",
     "pos": "WR",
-    "adp": 170.21,
-    "espnPerGame": {
+    "adp": 170.51,
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -5440,8 +5591,9 @@
     "name": "Alvin Kamara",
     "team": "NO",
     "pos": "RB",
-    "adp": 160.13,
-    "espnPerGame": {
+    "adp": 160.01,
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -5476,8 +5628,9 @@
     "name": "Daniel Jones",
     "team": "IND",
     "pos": "QB",
-    "adp": 158.47,
-    "espnPerGame": {
+    "adp": 158.67,
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": 31.1,
       "completions": 20.6,
       "passYards": 220.6,
@@ -5512,8 +5665,9 @@
     "name": "Brenton Strange",
     "team": "JAC",
     "pos": "TE",
-    "adp": 167.74,
-    "espnPerGame": {
+    "adp": 167.66,
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -5548,8 +5702,9 @@
     "name": "Denzel Boston",
     "team": "CLE",
     "pos": "WR",
-    "adp": 166.59,
-    "espnPerGame": {
+    "adp": 167.37,
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -5584,8 +5739,9 @@
     "name": "Braelon Allen",
     "team": "NYJ",
     "pos": "RB",
-    "adp": 170.88,
-    "espnPerGame": {
+    "adp": 170.95,
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -5620,8 +5776,9 @@
     "name": "Zach Charbonnet",
     "team": "SEA",
     "pos": "RB",
-    "adp": 154.78,
-    "espnPerGame": {
+    "adp": 154.03,
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -5656,8 +5813,9 @@
     "name": "Tre Tucker",
     "team": "LV",
     "pos": "WR",
-    "adp": 168.32,
-    "espnPerGame": {
+    "adp": 168.63,
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -5692,8 +5850,9 @@
     "name": "Jerry Jeudy",
     "team": "CLE",
     "pos": "WR",
-    "adp": 166.18,
-    "espnPerGame": {
+    "adp": 166.92,
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -5728,8 +5887,9 @@
     "name": "Mike Washington Jr.",
     "team": "LV",
     "pos": "RB",
-    "adp": 163.84,
-    "espnPerGame": {
+    "adp": 163.58,
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -5764,8 +5924,9 @@
     "name": "Jalen McMillan",
     "team": "TB",
     "pos": "WR",
-    "adp": 167.49,
-    "espnPerGame": {
+    "adp": 166.65,
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -5800,8 +5961,9 @@
     "name": "Jauan Jennings",
     "team": "MIN",
     "pos": "WR",
-    "adp": 171.01,
-    "espnPerGame": {
+    "adp": 171.04,
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -5836,8 +5998,9 @@
     "name": "Jordyn Tyson",
     "team": "NO",
     "pos": "WR",
-    "adp": 167.12,
-    "espnPerGame": {
+    "adp": 167.48,
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -5873,7 +6036,8 @@
     "team": "TEN",
     "pos": "QB",
     "adp": 169.16,
-    "espnPerGame": {
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": 32.8,
       "completions": 20.9,
       "passYards": 221.2,
@@ -5908,8 +6072,9 @@
     "name": "Kayshon Boutte",
     "team": "HOU",
     "pos": "WR",
-    "adp": 170.66,
-    "espnPerGame": {
+    "adp": 170.64,
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -5944,8 +6109,9 @@
     "name": "Dontayvion Wicks",
     "team": "PHI",
     "pos": "WR",
-    "adp": 170.82,
-    "espnPerGame": {
+    "adp": 170.88,
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -5980,8 +6146,9 @@
     "name": "T.J. Hockenson",
     "team": "MIN",
     "pos": "TE",
-    "adp": 137.25,
-    "espnPerGame": {
+    "adp": 141.02,
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -6016,8 +6183,9 @@
     "name": "Terrance Ferguson",
     "team": "LAR",
     "pos": "TE",
-    "adp": 166.31,
-    "espnPerGame": {
+    "adp": 166.91,
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -6052,8 +6220,9 @@
     "name": "Tyrone Tracy Jr.",
     "team": "NYG",
     "pos": "RB",
-    "adp": 170.12,
-    "espnPerGame": {
+    "adp": 170.22,
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -6089,7 +6258,8 @@
     "team": "BUF",
     "pos": "RB",
     "adp": 170.99,
-    "espnPerGame": {
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -6124,8 +6294,9 @@
     "name": "Keenan Allen",
     "team": "IND",
     "pos": "WR",
-    "adp": 166.39,
-    "espnPerGame": {
+    "adp": 165.74,
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -6160,8 +6331,9 @@
     "name": "AJ Barner",
     "team": "SEA",
     "pos": "TE",
-    "adp": 169.59,
-    "espnPerGame": {
+    "adp": 169.61,
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -6196,8 +6368,9 @@
     "name": "Calvin Ridley",
     "team": "TEN",
     "pos": "WR",
-    "adp": 168.14,
-    "espnPerGame": {
+    "adp": 168.21,
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -6232,8 +6405,9 @@
     "name": "Jalen Nailor",
     "team": "LV",
     "pos": "WR",
-    "adp": 170.74,
-    "espnPerGame": {
+    "adp": 170.86,
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -6269,7 +6443,8 @@
     "team": "CAR",
     "pos": "QB",
     "adp": 168.84,
-    "espnPerGame": {
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": 31.7,
       "completions": 19.8,
       "passYards": 214.1,
@@ -6304,8 +6479,9 @@
     "name": "Tre' Harris",
     "team": "LAC",
     "pos": "WR",
-    "adp": 171.08,
-    "espnPerGame": {
+    "adp": 171.11,
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -6340,8 +6516,9 @@
     "name": "Emmett Johnson",
     "team": "KC",
     "pos": "RB",
-    "adp": 170.04,
-    "espnPerGame": {
+    "adp": 170,
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -6376,8 +6553,9 @@
     "name": "Malik Washington",
     "team": "MIA",
     "pos": "WR",
-    "adp": 170.27,
-    "espnPerGame": {
+    "adp": 170.22,
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -6412,8 +6590,9 @@
     "name": "Ryan Flournoy",
     "team": "DAL",
     "pos": "WR",
-    "adp": 171.02,
-    "espnPerGame": {
+    "adp": 171.04,
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -6448,8 +6627,9 @@
     "name": "Omar Cooper Jr.",
     "team": "NYJ",
     "pos": "WR",
-    "adp": 171.22,
-    "espnPerGame": {
+    "adp": 171.19,
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -6484,8 +6664,9 @@
     "name": "Kenyon Sadiq",
     "team": "NYJ",
     "pos": "TE",
-    "adp": 151.36,
-    "espnPerGame": {
+    "adp": 154.77,
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -6520,8 +6701,9 @@
     "name": "Houston Texans",
     "team": "HOU",
     "pos": "DST",
-    "adp": 89.73,
-    "espnPerGame": {
+    "adp": 90.02,
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -6557,7 +6739,8 @@
     "team": "LAC",
     "pos": "RB",
     "adp": 170.94,
-    "espnPerGame": {
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -6592,8 +6775,9 @@
     "name": "Pat Bryant",
     "team": "DEN",
     "pos": "WR",
-    "adp": 170.53,
-    "espnPerGame": {
+    "adp": 170.48,
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -6628,8 +6812,9 @@
     "name": "Denver Broncos",
     "team": "DEN",
     "pos": "DST",
-    "adp": 99.17,
-    "espnPerGame": {
+    "adp": 98.87,
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -6664,8 +6849,9 @@
     "name": "Gunnar Helm",
     "team": "TEN",
     "pos": "TE",
-    "adp": 170.63,
-    "espnPerGame": {
+    "adp": 170.66,
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -6701,7 +6887,8 @@
     "team": "TB",
     "pos": "RB",
     "adp": 170.36,
-    "espnPerGame": {
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -6736,8 +6923,9 @@
     "name": "Seattle Seahawks",
     "team": "SEA",
     "pos": "DST",
-    "adp": 110.92,
-    "espnPerGame": {
+    "adp": 111.07,
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -6772,8 +6960,9 @@
     "name": "Jaydon Blue",
     "team": "DAL",
     "pos": "RB",
-    "adp": 170.53,
-    "espnPerGame": {
+    "adp": 170.49,
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -6808,8 +6997,9 @@
     "name": "Los Angeles Rams",
     "team": "LAR",
     "pos": "DST",
-    "adp": 108.75,
-    "espnPerGame": {
+    "adp": 109.14,
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -6844,8 +7034,9 @@
     "name": "Travis Hunter",
     "team": "JAC",
     "pos": "WR",
-    "adp": 120.37,
-    "espnPerGame": {
+    "adp": 119.69,
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -6881,7 +7072,8 @@
     "team": "LAC",
     "pos": "TE",
     "adp": 170.18,
-    "espnPerGame": {
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -6916,8 +7108,9 @@
     "name": "Rashod Bateman",
     "team": "BAL",
     "pos": "WR",
-    "adp": 171.27,
-    "espnPerGame": {
+    "adp": 171.32,
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -6952,8 +7145,9 @@
     "name": "Jacksonville Jaguars",
     "team": "JAC",
     "pos": "DST",
-    "adp": 0,
-    "espnPerGame": {
+    "adp": null,
+    "projectionProvider": null,
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -6988,8 +7182,9 @@
     "name": "Nicholas Singleton",
     "team": "TEN",
     "pos": "RB",
-    "adp": 170.43,
-    "espnPerGame": {
+    "adp": 170.41,
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -7024,8 +7219,9 @@
     "name": "Pat Freiermuth",
     "team": "PIT",
     "pos": "TE",
-    "adp": 169.26,
-    "espnPerGame": {
+    "adp": 169.35,
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -7060,8 +7256,9 @@
     "name": "Jaylin Noel",
     "team": "HOU",
     "pos": "WR",
-    "adp": 171.73,
-    "espnPerGame": {
+    "adp": 171.75,
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -7096,8 +7293,9 @@
     "name": "Philadelphia Eagles",
     "team": "PHI",
     "pos": "DST",
-    "adp": 136.92,
-    "espnPerGame": {
+    "adp": 137.21,
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -7132,8 +7330,9 @@
     "name": "New England Patriots",
     "team": "NE",
     "pos": "DST",
-    "adp": 151.6,
-    "espnPerGame": {
+    "adp": 152.13,
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -7168,8 +7367,9 @@
     "name": "Pittsburgh Steelers",
     "team": "PIT",
     "pos": "DST",
-    "adp": 119.44,
-    "espnPerGame": {
+    "adp": 119.89,
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -7204,8 +7404,9 @@
     "name": "Brandon Aubrey",
     "team": "DAL",
     "pos": "K",
-    "adp": 87.48,
-    "espnPerGame": {
+    "adp": 86.74,
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -7240,8 +7441,9 @@
     "name": "Jacoby Brissett",
     "team": "ARI",
     "pos": "QB",
-    "adp": 170.05,
-    "espnPerGame": {
+    "adp": 170,
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": 30.4,
       "completions": 19.2,
       "passYards": 197.3,
@@ -7276,8 +7478,9 @@
     "name": "Los Angeles Chargers",
     "team": "LAC",
     "pos": "DST",
-    "adp": 164.92,
-    "espnPerGame": {
+    "adp": 165.23,
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -7312,8 +7515,9 @@
     "name": "Geno Smith",
     "team": "NYJ",
     "pos": "QB",
-    "adp": 170.16,
-    "espnPerGame": {
+    "adp": 170.11,
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": 31.2,
       "completions": 21.2,
       "passYards": 224.4,
@@ -7348,8 +7552,9 @@
     "name": "Minnesota Vikings",
     "team": "MIN",
     "pos": "DST",
-    "adp": 168.79,
-    "espnPerGame": {
+    "adp": 168.84,
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -7384,8 +7589,9 @@
     "name": "Cooper Kupp",
     "team": "SEA",
     "pos": "WR",
-    "adp": 169.04,
-    "espnPerGame": {
+    "adp": 169.1,
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -7420,8 +7626,9 @@
     "name": "Cameron Dicker",
     "team": "LAC",
     "pos": "K",
-    "adp": 108.4,
-    "espnPerGame": {
+    "adp": 109.4,
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -7456,8 +7663,9 @@
     "name": "Tank Dell",
     "team": "HOU",
     "pos": "WR",
-    "adp": 156.7,
-    "espnPerGame": {
+    "adp": 158.34,
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -7492,8 +7700,9 @@
     "name": "Cade Otton",
     "team": "TB",
     "pos": "TE",
-    "adp": 170.46,
-    "espnPerGame": {
+    "adp": 170.41,
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -7528,8 +7737,9 @@
     "name": "George Holani",
     "team": "SEA",
     "pos": "RB",
-    "adp": 170.31,
-    "espnPerGame": {
+    "adp": 170.3,
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -7564,8 +7774,9 @@
     "name": "Aaron Rodgers",
     "team": "PIT",
     "pos": "QB",
-    "adp": 169.25,
-    "espnPerGame": {
+    "adp": 169.22,
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": 33.4,
       "completions": 21.3,
       "passYards": 221.9,
@@ -7600,8 +7811,9 @@
     "name": "Ka'imi Fairbairn",
     "team": "HOU",
     "pos": "K",
-    "adp": 131.72,
-    "espnPerGame": {
+    "adp": 129.58,
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -7636,8 +7848,9 @@
     "name": "Justice Hill",
     "team": "BAL",
     "pos": "RB",
-    "adp": 170.16,
-    "espnPerGame": {
+    "adp": 169.58,
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -7672,8 +7885,9 @@
     "name": "Cam Little",
     "team": "JAC",
     "pos": "K",
-    "adp": 141.33,
-    "espnPerGame": {
+    "adp": 140.9,
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -7708,8 +7922,9 @@
     "name": "Kaytron Allen",
     "team": "WAS",
     "pos": "RB",
-    "adp": 170.47,
-    "espnPerGame": {
+    "adp": 170.46,
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -7744,8 +7959,9 @@
     "name": "Kansas City Chiefs",
     "team": "KC",
     "pos": "DST",
-    "adp": 164.85,
-    "espnPerGame": {
+    "adp": 165.15,
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -7781,7 +7997,8 @@
     "team": "SF",
     "pos": "RB",
     "adp": 170.42,
-    "espnPerGame": {
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -7816,8 +8033,9 @@
     "name": "Baltimore Ravens",
     "team": "BAL",
     "pos": "DST",
-    "adp": 134.15,
-    "espnPerGame": {
+    "adp": 134.04,
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -7852,8 +8070,9 @@
     "name": "Isaac TeSlaa",
     "team": "DET",
     "pos": "WR",
-    "adp": 170.31,
-    "espnPerGame": {
+    "adp": 170.29,
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -7888,8 +8107,9 @@
     "name": "Jason Myers",
     "team": "SEA",
     "pos": "K",
-    "adp": 118.94,
-    "espnPerGame": {
+    "adp": 117.8,
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -7924,8 +8144,9 @@
     "name": "Jaylen Wright",
     "team": "MIA",
     "pos": "RB",
-    "adp": 170.53,
-    "espnPerGame": {
+    "adp": 170.54,
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -7960,8 +8181,9 @@
     "name": "Darnell Mooney",
     "team": "NYG",
     "pos": "WR",
-    "adp": 170.49,
-    "espnPerGame": {
+    "adp": 170.47,
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -7996,8 +8218,9 @@
     "name": "Germie Bernard",
     "team": "PIT",
     "pos": "WR",
-    "adp": 171.39,
-    "espnPerGame": {
+    "adp": 171.35,
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -8032,8 +8255,9 @@
     "name": "Tyler Loop",
     "team": "BAL",
     "pos": "K",
-    "adp": 164.93,
-    "espnPerGame": {
+    "adp": 164.98,
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -8068,8 +8292,9 @@
     "name": "Green Bay Packers",
     "team": "GB",
     "pos": "DST",
-    "adp": 168.88,
-    "espnPerGame": {
+    "adp": 168.92,
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -8104,8 +8329,9 @@
     "name": "Jake Bates",
     "team": "DET",
     "pos": "K",
-    "adp": 157.16,
-    "espnPerGame": {
+    "adp": 157.17,
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -8140,8 +8366,9 @@
     "name": "Devaughn Vele",
     "team": "NO",
     "pos": "WR",
-    "adp": 171.56,
-    "espnPerGame": {
+    "adp": 171.59,
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -8176,8 +8403,9 @@
     "name": "Eddy Pineiro",
     "team": "SF",
     "pos": "K",
-    "adp": 147.2,
-    "espnPerGame": {
+    "adp": 144.88,
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -8212,8 +8440,9 @@
     "name": "Najee Harris",
     "team": "NYG",
     "pos": "RB",
-    "adp": 170.13,
-    "espnPerGame": {
+    "adp": 170.14,
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -8248,8 +8477,9 @@
     "name": "Harrison Mevis",
     "team": "LAR",
     "pos": "K",
-    "adp": 134.79,
-    "espnPerGame": {
+    "adp": 135.98,
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -8284,8 +8514,9 @@
     "name": "Emanuel Wilson",
     "team": "SEA",
     "pos": "RB",
-    "adp": 170.23,
-    "espnPerGame": {
+    "adp": 170.22,
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -8320,8 +8551,9 @@
     "name": "Samaje Perine",
     "team": "CIN",
     "pos": "RB",
-    "adp": 171.08,
-    "espnPerGame": {
+    "adp": 171.11,
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -8357,7 +8589,8 @@
     "team": "ARI",
     "pos": "RB",
     "adp": 170.17,
-    "espnPerGame": {
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -8371,7 +8604,7 @@
       "receivingYards": null,
       "receivingTds": null,
       "fumblesLost": null,
-      "twoPointConversions": 0,
+      "twoPointConversions": null,
       "patMade": null,
       "fgMissed": null,
       "fgMade0to39": null,
@@ -8392,8 +8625,9 @@
     "name": "Detroit Lions",
     "team": "DET",
     "pos": "DST",
-    "adp": 153.55,
-    "espnPerGame": {
+    "adp": 153.94,
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -8428,8 +8662,9 @@
     "name": "Zachariah Branch",
     "team": "ATL",
     "pos": "WR",
-    "adp": 170.86,
-    "espnPerGame": {
+    "adp": 170.85,
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -8465,7 +8700,8 @@
     "team": "LAC",
     "pos": "TE",
     "adp": 169.63,
-    "espnPerGame": {
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -8500,8 +8736,9 @@
     "name": "Cairo Santos",
     "team": "CHI",
     "pos": "K",
-    "adp": 168.89,
-    "espnPerGame": {
+    "adp": 168.92,
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -8537,7 +8774,8 @@
     "team": "BUF",
     "pos": "DST",
     "adp": 168.93,
-    "espnPerGame": {
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -8572,8 +8810,9 @@
     "name": "Ja'Kobi Lane",
     "team": "BAL",
     "pos": "WR",
-    "adp": 167.97,
-    "espnPerGame": {
+    "adp": 168.2,
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -8608,8 +8847,9 @@
     "name": "Evan Engram",
     "team": "DEN",
     "pos": "TE",
-    "adp": 170.08,
-    "espnPerGame": {
+    "adp": 170.05,
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -8644,8 +8884,9 @@
     "name": "Malachi Fields",
     "team": "NYG",
     "pos": "WR",
-    "adp": 170.03,
-    "espnPerGame": {
+    "adp": 170.06,
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -8680,8 +8921,9 @@
     "name": "Chase McLaughlin",
     "team": "TB",
     "pos": "K",
-    "adp": 170.14,
-    "espnPerGame": {
+    "adp": 170.13,
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -8716,8 +8958,9 @@
     "name": "Evan McPherson",
     "team": "CIN",
     "pos": "K",
-    "adp": 169.38,
-    "espnPerGame": {
+    "adp": 169.3,
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -8752,8 +8995,9 @@
     "name": "Cleveland Browns",
     "team": "CLE",
     "pos": "DST",
-    "adp": 156.06,
-    "espnPerGame": {
+    "adp": 156.56,
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -8788,8 +9032,9 @@
     "name": "Troy Franklin",
     "team": "DEN",
     "pos": "WR",
-    "adp": 170.08,
-    "espnPerGame": {
+    "adp": 170.06,
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -8824,8 +9069,9 @@
     "name": "Isaiah Davis",
     "team": "NYJ",
     "pos": "RB",
-    "adp": 170.57,
-    "espnPerGame": {
+    "adp": 170.58,
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -8860,8 +9106,9 @@
     "name": "Jordan James",
     "team": "SF",
     "pos": "RB",
-    "adp": 170.93,
-    "espnPerGame": {
+    "adp": 170.94,
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -8896,8 +9143,9 @@
     "name": "Keon Coleman",
     "team": "BUF",
     "pos": "WR",
-    "adp": 170.47,
-    "espnPerGame": {
+    "adp": 170.43,
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -8932,8 +9180,9 @@
     "name": "Chris Brooks",
     "team": "GB",
     "pos": "RB",
-    "adp": 170.24,
-    "espnPerGame": {
+    "adp": 170.23,
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -8968,8 +9217,9 @@
     "name": "Antonio Williams",
     "team": "WAS",
     "pos": "WR",
-    "adp": 170.71,
-    "espnPerGame": {
+    "adp": 170.63,
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -9004,8 +9254,9 @@
     "name": "Andy Borregales",
     "team": "NE",
     "pos": "K",
-    "adp": 170.09,
-    "espnPerGame": {
+    "adp": 170.07,
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -9040,8 +9291,9 @@
     "name": "Ty Johnson",
     "team": "BUF",
     "pos": "RB",
-    "adp": 170.69,
-    "espnPerGame": {
+    "adp": 170.71,
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -9076,8 +9328,9 @@
     "name": "Demond Claiborne",
     "team": "MIN",
     "pos": "RB",
-    "adp": 170.41,
-    "espnPerGame": {
+    "adp": 170.4,
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -9112,8 +9365,9 @@
     "name": "Chris Bell",
     "team": "MIA",
     "pos": "WR",
-    "adp": 170.55,
-    "espnPerGame": {
+    "adp": 170.54,
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -9148,8 +9402,9 @@
     "name": "Jack Bech",
     "team": "LV",
     "pos": "WR",
-    "adp": 170.24,
-    "espnPerGame": {
+    "adp": 170.23,
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -9184,8 +9439,9 @@
     "name": "Fernando Mendoza",
     "team": "LV",
     "pos": "QB",
-    "adp": 167.91,
-    "espnPerGame": {
+    "adp": 168,
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": 26.5,
       "completions": 16.7,
       "passYards": 179.9,
@@ -9220,8 +9476,9 @@
     "name": "Ollie Gordon II",
     "team": "MIA",
     "pos": "RB",
-    "adp": 170.65,
-    "espnPerGame": {
+    "adp": 170.66,
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -9257,7 +9514,8 @@
     "team": "MIA",
     "pos": "TE",
     "adp": 170.43,
-    "espnPerGame": {
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -9292,8 +9550,9 @@
     "name": "Malik Davis",
     "team": "DAL",
     "pos": "RB",
-    "adp": 170,
-    "espnPerGame": {
+    "adp": 170.03,
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -9328,8 +9587,9 @@
     "name": "Colby Parkinson",
     "team": "LAR",
     "pos": "TE",
-    "adp": 170.35,
-    "espnPerGame": {
+    "adp": 170.3,
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -9364,8 +9624,9 @@
     "name": "Harrison Butker",
     "team": "KC",
     "pos": "K",
-    "adp": 144.48,
-    "espnPerGame": {
+    "adp": 143.87,
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -9400,8 +9661,9 @@
     "name": "Caleb Douglas",
     "team": "MIA",
     "pos": "WR",
-    "adp": 169.77,
-    "espnPerGame": {
+    "adp": 170.08,
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -9436,8 +9698,9 @@
     "name": "LeQuint Allen Jr.",
     "team": "JAC",
     "pos": "RB",
-    "adp": 170.38,
-    "espnPerGame": {
+    "adp": 170.37,
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -9472,8 +9735,9 @@
     "name": "Ted Hurst III",
     "team": "TB",
     "pos": "WR",
-    "adp": 170.21,
-    "espnPerGame": {
+    "adp": 170.2,
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -9508,8 +9772,9 @@
     "name": "Tyquan Thornton",
     "team": "KC",
     "pos": "WR",
-    "adp": 170.44,
-    "espnPerGame": {
+    "adp": 170.43,
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -9544,8 +9809,9 @@
     "name": "DJ Giddens",
     "team": "IND",
     "pos": "RB",
-    "adp": 170.23,
-    "espnPerGame": {
+    "adp": 170.2,
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -9580,8 +9846,9 @@
     "name": "Tory Horton",
     "team": "SEA",
     "pos": "WR",
-    "adp": 170.27,
-    "espnPerGame": {
+    "adp": 170.24,
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -9616,8 +9883,9 @@
     "name": "Darius Slayton",
     "team": "NYG",
     "pos": "WR",
-    "adp": 170.56,
-    "espnPerGame": {
+    "adp": 170.57,
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -9652,8 +9920,9 @@
     "name": "Chris Boswell",
     "team": "PIT",
     "pos": "K",
-    "adp": 164.45,
-    "espnPerGame": {
+    "adp": 164.4,
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -9688,8 +9957,9 @@
     "name": "Emari Demercado",
     "team": "KC",
     "pos": "RB",
-    "adp": 170.4,
-    "espnPerGame": {
+    "adp": 170.39,
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -9724,8 +9994,9 @@
     "name": "Wil Lutz",
     "team": "DEN",
     "pos": "K",
-    "adp": 169.75,
-    "espnPerGame": {
+    "adp": 169.69,
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -9760,8 +10031,9 @@
     "name": "Seth McGowan",
     "team": "IND",
     "pos": "RB",
-    "adp": 170.19,
-    "espnPerGame": {
+    "adp": 170.2,
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -9796,8 +10068,9 @@
     "name": "Xavier Legette",
     "team": "CAR",
     "pos": "WR",
-    "adp": 170.71,
-    "espnPerGame": {
+    "adp": 170.72,
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -9832,8 +10105,9 @@
     "name": "Elic Ayomanor",
     "team": "TEN",
     "pos": "WR",
-    "adp": 169.99,
-    "espnPerGame": {
+    "adp": 170,
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -9868,8 +10142,9 @@
     "name": "Kendre Miller",
     "team": "NO",
     "pos": "RB",
-    "adp": 170.17,
-    "espnPerGame": {
+    "adp": 170.16,
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -9904,8 +10179,9 @@
     "name": "Tua Tagovailoa",
     "team": "ATL",
     "pos": "QB",
-    "adp": 170.08,
-    "espnPerGame": {
+    "adp": 170.07,
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": 17.7,
       "completions": 12,
       "passYards": 127.7,
@@ -9940,8 +10216,9 @@
     "name": "Chimere Dike",
     "team": "TEN",
     "pos": "WR",
-    "adp": 169.97,
-    "espnPerGame": {
+    "adp": 169.91,
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -9976,8 +10253,9 @@
     "name": "Adam Randall",
     "team": "BAL",
     "pos": "RB",
-    "adp": 170.39,
-    "espnPerGame": {
+    "adp": 170.37,
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -10012,8 +10290,9 @@
     "name": "Will Reichard",
     "team": "MIN",
     "pos": "K",
-    "adp": 167.39,
-    "espnPerGame": {
+    "adp": 167.57,
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -10048,8 +10327,9 @@
     "name": "Mason Taylor",
     "team": "NYJ",
     "pos": "TE",
-    "adp": 170.04,
-    "espnPerGame": {
+    "adp": 170.03,
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -10085,7 +10365,8 @@
     "team": "DEN",
     "pos": "WR",
     "adp": 170.18,
-    "espnPerGame": {
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -10120,8 +10401,9 @@
     "name": "Michael Penix Jr.",
     "team": "ATL",
     "pos": "QB",
-    "adp": 170.08,
-    "espnPerGame": {
+    "adp": 170.09,
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": 15.6,
       "completions": 9.9,
       "passYards": 110.8,
@@ -10157,7 +10439,8 @@
     "team": "LV",
     "pos": "QB",
     "adp": 169.97,
-    "espnPerGame": {
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": 7,
       "completions": 4.6,
       "passYards": 49,
@@ -10192,8 +10475,9 @@
     "name": "Atlanta Falcons",
     "team": "ATL",
     "pos": "DST",
-    "adp": 170.12,
-    "espnPerGame": {
+    "adp": 170.09,
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -10228,8 +10512,9 @@
     "name": "Devin Neal",
     "team": "NO",
     "pos": "RB",
-    "adp": 0,
-    "espnPerGame": {
+    "adp": null,
+    "projectionProvider": null,
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -10264,8 +10549,9 @@
     "name": "Tahj Brooks",
     "team": "CIN",
     "pos": "RB",
-    "adp": 170.17,
-    "espnPerGame": {
+    "adp": 170.16,
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -10301,7 +10587,8 @@
     "team": "SF",
     "pos": "DST",
     "adp": 168.87,
-    "espnPerGame": {
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -10337,7 +10624,8 @@
     "team": "SF",
     "pos": "WR",
     "adp": 169.92,
-    "espnPerGame": {
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -10372,8 +10660,9 @@
     "name": "Brashard Smith",
     "team": "KC",
     "pos": "RB",
-    "adp": 170.09,
-    "espnPerGame": {
+    "adp": 170.08,
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -10387,7 +10676,7 @@
       "receivingYards": null,
       "receivingTds": null,
       "fumblesLost": null,
-      "twoPointConversions": 0,
+      "twoPointConversions": null,
       "patMade": null,
       "fgMissed": null,
       "fgMade0to39": null,
@@ -10409,7 +10698,8 @@
     "team": "NYG",
     "pos": "RB",
     "adp": 169.98,
-    "espnPerGame": {
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -10423,7 +10713,7 @@
       "receivingYards": null,
       "receivingTds": null,
       "fumblesLost": null,
-      "twoPointConversions": 0,
+      "twoPointConversions": null,
       "patMade": null,
       "fgMissed": null,
       "fgMade0to39": null,
@@ -10444,8 +10734,9 @@
     "name": "Trevor Etienne",
     "team": "CAR",
     "pos": "RB",
-    "adp": 170.01,
-    "espnPerGame": {
+    "adp": 170.02,
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -10480,8 +10771,9 @@
     "name": "Deshaun Watson",
     "team": "CLE",
     "pos": "QB",
-    "adp": 170.06,
-    "espnPerGame": {
+    "adp": 170.07,
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": 11.5,
       "completions": 7.1,
       "passYards": 75.5,
@@ -10516,8 +10808,9 @@
     "name": "Mike Gesicki",
     "team": "CIN",
     "pos": "TE",
-    "adp": 170.33,
-    "espnPerGame": {
+    "adp": 170.29,
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -10553,7 +10846,8 @@
     "team": "BAL",
     "pos": "WR",
     "adp": 169.98,
-    "espnPerGame": {
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -10588,8 +10882,9 @@
     "name": "Theo Johnson",
     "team": "NYG",
     "pos": "TE",
-    "adp": 170.18,
-    "espnPerGame": {
+    "adp": 170.16,
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -10624,8 +10919,9 @@
     "name": "Cyrus Allen",
     "team": "KC",
     "pos": "WR",
-    "adp": 169.58,
-    "espnPerGame": {
+    "adp": 169.64,
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -10660,8 +10956,9 @@
     "name": "Shedeur Sanders",
     "team": "CLE",
     "pos": "QB",
-    "adp": 169.71,
-    "espnPerGame": {
+    "adp": 169.74,
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": 20.6,
       "completions": 13,
       "passYards": 143.4,
@@ -10696,8 +10993,9 @@
     "name": "Mack Hollins",
     "team": "NE",
     "pos": "WR",
-    "adp": 169.99,
-    "espnPerGame": {
+    "adp": 170.02,
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -10732,8 +11030,9 @@
     "name": "Darren Waller",
     "team": "CAR",
     "pos": "TE",
-    "adp": 170.32,
-    "espnPerGame": {
+    "adp": 170.33,
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -10769,7 +11068,8 @@
     "team": "PIT",
     "pos": "RB",
     "adp": 170.08,
-    "espnPerGame": {
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -10804,8 +11104,9 @@
     "name": "Trey Benson",
     "team": "ARI",
     "pos": "RB",
-    "adp": 0,
-    "espnPerGame": {
+    "adp": 169.96,
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -10841,7 +11142,8 @@
     "team": "NE",
     "pos": "WR",
     "adp": 169.95,
-    "espnPerGame": {
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -10876,8 +11178,9 @@
     "name": "Jarquez Hunter",
     "team": "MIA",
     "pos": "RB",
-    "adp": 0,
-    "espnPerGame": {
+    "adp": null,
+    "projectionProvider": null,
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -10913,7 +11216,8 @@
     "team": "PHI",
     "pos": "RB",
     "adp": 170.12,
-    "espnPerGame": {
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -10949,7 +11253,8 @@
     "team": "PHI",
     "pos": "WR",
     "adp": 169.95,
-    "espnPerGame": {
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -10984,8 +11289,9 @@
     "name": "New Orleans Saints",
     "team": "NO",
     "pos": "DST",
-    "adp": 170.36,
-    "espnPerGame": {
+    "adp": 170.4,
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -11020,8 +11326,9 @@
     "name": "Audric Estime",
     "team": "NO",
     "pos": "RB",
-    "adp": 0,
-    "espnPerGame": {
+    "adp": 169.99,
+    "projectionProvider": null,
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -11056,8 +11363,9 @@
     "name": "DeMario Douglas",
     "team": "NE",
     "pos": "WR",
-    "adp": 170.23,
-    "espnPerGame": {
+    "adp": 170.31,
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -11093,7 +11401,8 @@
     "team": "PHI",
     "pos": "TE",
     "adp": 169.96,
-    "espnPerGame": {
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -11128,8 +11437,9 @@
     "name": "Jaleel McLaughlin",
     "team": "DEN",
     "pos": "RB",
-    "adp": 0,
-    "espnPerGame": {
+    "adp": 169.98,
+    "projectionProvider": null,
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -11164,8 +11474,9 @@
     "name": "Jahan Dotson",
     "team": "ATL",
     "pos": "WR",
-    "adp": 170.65,
-    "espnPerGame": {
+    "adp": 170.66,
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -11200,8 +11511,9 @@
     "name": "Isaac Guerendo",
     "team": "SF",
     "pos": "RB",
-    "adp": 170.12,
-    "espnPerGame": {
+    "adp": 170.11,
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -11215,7 +11527,7 @@
       "receivingYards": null,
       "receivingTds": null,
       "fumblesLost": null,
-      "twoPointConversions": 0,
+      "twoPointConversions": null,
       "patMade": null,
       "fgMissed": null,
       "fgMade0to39": null,
@@ -11237,7 +11549,8 @@
     "team": "CLE",
     "pos": "WR",
     "adp": 169.98,
-    "espnPerGame": {
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -11272,8 +11585,9 @@
     "name": "Darnell Washington",
     "team": "PIT",
     "pos": "TE",
-    "adp": 169.71,
-    "espnPerGame": {
+    "adp": 169.73,
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -11308,8 +11622,9 @@
     "name": "Michael Mayer",
     "team": "LV",
     "pos": "TE",
-    "adp": 170.36,
-    "espnPerGame": {
+    "adp": 170.3,
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -11344,8 +11659,9 @@
     "name": "Andrei Iosivas",
     "team": "CIN",
     "pos": "WR",
-    "adp": 170.1,
-    "espnPerGame": {
+    "adp": 170.11,
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -11380,8 +11696,9 @@
     "name": "Skyler Bell",
     "team": "BUF",
     "pos": "WR",
-    "adp": 169.95,
-    "espnPerGame": {
+    "adp": 169.93,
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -11416,8 +11733,9 @@
     "name": "Indianapolis Colts",
     "team": "IND",
     "pos": "DST",
-    "adp": 170.21,
-    "espnPerGame": {
+    "adp": 170.17,
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -11453,7 +11771,8 @@
     "team": "MIA",
     "pos": "WR",
     "adp": 170.56,
-    "espnPerGame": {
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -11488,8 +11807,9 @@
     "name": "Charlie Smyth",
     "team": "NO",
     "pos": "K",
-    "adp": 0,
-    "espnPerGame": {
+    "adp": null,
+    "projectionProvider": null,
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -11525,7 +11845,8 @@
     "team": "CHI",
     "pos": "DST",
     "adp": 169.58,
-    "espnPerGame": {
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -11561,7 +11882,8 @@
     "team": "SEA",
     "pos": "TE",
     "adp": 169.9,
-    "espnPerGame": {
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -11596,8 +11918,9 @@
     "name": "Jake Tonges",
     "team": "SF",
     "pos": "TE",
-    "adp": 170.31,
-    "espnPerGame": {
+    "adp": 170.25,
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -11632,8 +11955,9 @@
     "name": "Kareem Hunt",
     "team": "FA",
     "pos": "RB",
-    "adp": 0,
-    "espnPerGame": {
+    "adp": null,
+    "projectionProvider": null,
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -11669,7 +11993,8 @@
     "team": "CIN",
     "pos": "TE",
     "adp": 170.05,
-    "espnPerGame": {
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -11704,8 +12029,9 @@
     "name": "Dawson Knox",
     "team": "BUF",
     "pos": "TE",
-    "adp": 169.76,
-    "espnPerGame": {
+    "adp": 169.77,
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -11741,7 +12067,8 @@
     "team": "NO",
     "pos": "WR",
     "adp": 169.98,
-    "espnPerGame": {
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -11777,7 +12104,8 @@
     "team": "LAC",
     "pos": "TE",
     "adp": 169.98,
-    "espnPerGame": {
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -11812,8 +12140,9 @@
     "name": "Tyreek Hill",
     "team": "FA",
     "pos": "WR",
-    "adp": 0,
-    "espnPerGame": {
+    "adp": null,
+    "projectionProvider": null,
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -11848,8 +12177,9 @@
     "name": "Joe Mixon",
     "team": "FA",
     "pos": "RB",
-    "adp": 0,
-    "espnPerGame": {
+    "adp": null,
+    "projectionProvider": null,
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -11884,8 +12214,9 @@
     "name": "Xavier Hutchinson",
     "team": "HOU",
     "pos": "WR",
-    "adp": 170.2,
-    "espnPerGame": {
+    "adp": 170.15,
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -11920,8 +12251,9 @@
     "name": "Brandon Aiyuk",
     "team": "SF",
     "pos": "WR",
-    "adp": 169.95,
-    "espnPerGame": {
+    "adp": 169.96,
+    "projectionProvider": null,
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -11957,7 +12289,8 @@
     "team": "CHI",
     "pos": "TE",
     "adp": 169.73,
-    "espnPerGame": {
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -11993,7 +12326,8 @@
     "team": "NO",
     "pos": "TE",
     "adp": 169.98,
-    "espnPerGame": {
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -12028,8 +12362,9 @@
     "name": "Eli Raridon",
     "team": "NE",
     "pos": "TE",
-    "adp": 169.95,
-    "espnPerGame": {
+    "adp": 169.96,
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -12064,8 +12399,9 @@
     "name": "Noah Gray",
     "team": "KC",
     "pos": "TE",
-    "adp": 169.91,
-    "espnPerGame": {
+    "adp": 169.92,
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -12100,8 +12436,9 @@
     "name": "Carson Beck",
     "team": "ARI",
     "pos": "QB",
-    "adp": 169.97,
-    "espnPerGame": {
+    "adp": 169.98,
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": 16.5,
       "completions": 10.2,
       "passYards": 112.6,
@@ -12136,8 +12473,9 @@
     "name": "Tyler Higbee",
     "team": "LAR",
     "pos": "TE",
-    "adp": 169.86,
-    "espnPerGame": {
+    "adp": 169.87,
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -12172,8 +12510,9 @@
     "name": "Kendrick Bourne",
     "team": "ARI",
     "pos": "WR",
-    "adp": 170.01,
-    "espnPerGame": {
+    "adp": 170,
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -12208,8 +12547,9 @@
     "name": "Dallas Cowboys",
     "team": "DAL",
     "pos": "DST",
-    "adp": 166.69,
-    "espnPerGame": {
+    "adp": 166.68,
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -12245,7 +12585,8 @@
     "team": "LAR",
     "pos": "WR",
     "adp": 169.97,
-    "espnPerGame": {
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -12280,8 +12621,9 @@
     "name": "Luke McCaffrey",
     "team": "WAS",
     "pos": "WR",
-    "adp": 169.91,
-    "espnPerGame": {
+    "adp": 169.9,
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -12317,7 +12659,8 @@
     "team": "ARI",
     "pos": "RB",
     "adp": 170.1,
-    "espnPerGame": {
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -12331,7 +12674,7 @@
       "receivingYards": null,
       "receivingTds": null,
       "fumblesLost": null,
-      "twoPointConversions": 0,
+      "twoPointConversions": null,
       "patMade": null,
       "fgMissed": null,
       "fgMade0to39": null,
@@ -12353,7 +12696,8 @@
     "team": "LAC",
     "pos": "WR",
     "adp": 169.98,
-    "espnPerGame": {
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -12389,7 +12733,8 @@
     "team": "TB",
     "pos": "WR",
     "adp": 169.98,
-    "espnPerGame": {
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -12425,7 +12770,8 @@
     "team": "BUF",
     "pos": "WR",
     "adp": 169.94,
-    "espnPerGame": {
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -12460,8 +12806,9 @@
     "name": "J.J. McCarthy",
     "team": "MIN",
     "pos": "QB",
-    "adp": 169.78,
-    "espnPerGame": {
+    "adp": 169.82,
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": 5,
       "completions": 3.2,
       "passYards": 35.2,
@@ -12497,7 +12844,8 @@
     "team": "WAS",
     "pos": "WR",
     "adp": 169.99,
-    "espnPerGame": {
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -12532,8 +12880,9 @@
     "name": "Eli Heidenreich",
     "team": "PIT",
     "pos": "RB",
-    "adp": 0,
-    "espnPerGame": {
+    "adp": null,
+    "projectionProvider": null,
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -12569,7 +12918,8 @@
     "team": "KC",
     "pos": "WR",
     "adp": 169.97,
-    "espnPerGame": {
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -12605,7 +12955,8 @@
     "team": "HOU",
     "pos": "RB",
     "adp": 170.16,
-    "espnPerGame": {
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -12640,8 +12991,9 @@
     "name": "Cedric Tillman",
     "team": "FA",
     "pos": "WR",
-    "adp": 0,
-    "espnPerGame": {
+    "adp": null,
+    "projectionProvider": null,
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -12676,8 +13028,9 @@
     "name": "Olamide Zaccheaus",
     "team": "ATL",
     "pos": "WR",
-    "adp": 169.98,
-    "espnPerGame": {
+    "adp": 169.99,
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -12712,8 +13065,9 @@
     "name": "Savion Williams",
     "team": "GB",
     "pos": "WR",
-    "adp": 170.13,
-    "espnPerGame": {
+    "adp": 170.1,
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -12749,7 +13103,8 @@
     "team": "CAR",
     "pos": "TE",
     "adp": 169.94,
-    "espnPerGame": {
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -12785,7 +13140,8 @@
     "team": "TEN",
     "pos": "RB",
     "adp": 169.99,
-    "espnPerGame": {
+    "projectionProvider": null,
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -12820,8 +13176,9 @@
     "name": "KaVontae Turpin",
     "team": "DAL",
     "pos": "WR",
-    "adp": 169.87,
-    "espnPerGame": {
+    "adp": 169.83,
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -12857,7 +13214,8 @@
     "team": "LAR",
     "pos": "TE",
     "adp": 169.98,
-    "espnPerGame": {
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -12893,7 +13251,8 @@
     "team": "SF",
     "pos": "QB",
     "adp": 169.97,
-    "espnPerGame": {
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": 1.3,
       "completions": 0.9,
       "passYards": 8.6,
@@ -12928,8 +13287,9 @@
     "name": "Raheim Sanders",
     "team": "CLE",
     "pos": "RB",
-    "adp": 0,
-    "espnPerGame": {
+    "adp": null,
+    "projectionProvider": null,
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -12965,7 +13325,8 @@
     "team": "LV",
     "pos": "WR",
     "adp": 169.99,
-    "espnPerGame": {
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -13001,7 +13362,8 @@
     "team": "KC",
     "pos": "QB",
     "adp": 169.96,
-    "espnPerGame": {
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": 1.2,
       "completions": 0.8,
       "passYards": 8.3,
@@ -13036,8 +13398,9 @@
     "name": "Jake Elliott",
     "team": "PHI",
     "pos": "K",
-    "adp": 168.98,
-    "espnPerGame": {
+    "adp": 168.97,
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -13073,7 +13436,8 @@
     "team": "CHI",
     "pos": "WR",
     "adp": 169.97,
-    "espnPerGame": {
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -13108,8 +13472,9 @@
     "name": "Carolina Panthers",
     "team": "CAR",
     "pos": "DST",
-    "adp": 169.83,
-    "espnPerGame": {
+    "adp": 169.82,
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -13145,7 +13510,8 @@
     "team": "DEN",
     "pos": "TE",
     "adp": 169.97,
-    "espnPerGame": {
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -13180,8 +13546,9 @@
     "name": "Ty Simpson",
     "team": "LAR",
     "pos": "QB",
-    "adp": 169.94,
-    "espnPerGame": {
+    "adp": 169.95,
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": 1.3,
       "completions": 0.8,
       "passYards": 8.6,
@@ -13217,7 +13584,8 @@
     "team": "PIT",
     "pos": "WR",
     "adp": 169.97,
-    "espnPerGame": {
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -13252,8 +13620,9 @@
     "name": "Colbie Young",
     "team": "CIN",
     "pos": "WR",
-    "adp": 169.96,
-    "espnPerGame": {
+    "adp": 169.97,
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -13289,7 +13658,8 @@
     "team": "CHI",
     "pos": "WR",
     "adp": 169.96,
-    "espnPerGame": {
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -13324,8 +13694,9 @@
     "name": "Tyler Bass",
     "team": "BUF",
     "pos": "K",
-    "adp": 169.59,
-    "espnPerGame": {
+    "adp": 169.56,
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -13361,7 +13732,8 @@
     "team": "LV",
     "pos": "WR",
     "adp": 169.98,
-    "espnPerGame": {
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -13396,8 +13768,9 @@
     "name": "Roschon Johnson",
     "team": "CHI",
     "pos": "RB",
-    "adp": 0,
-    "espnPerGame": {
+    "adp": 169.98,
+    "projectionProvider": null,
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -13433,7 +13806,8 @@
     "team": "MIA",
     "pos": "WR",
     "adp": 169.98,
-    "espnPerGame": {
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -13469,7 +13843,8 @@
     "team": "WAS",
     "pos": "WR",
     "adp": 169.99,
-    "espnPerGame": {
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -13505,7 +13880,8 @@
     "team": "NO",
     "pos": "TE",
     "adp": 169.97,
-    "espnPerGame": {
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -13541,7 +13917,8 @@
     "team": "IND",
     "pos": "QB",
     "adp": 169.97,
-    "espnPerGame": {
+    "projectionProvider": null,
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -13576,8 +13953,9 @@
     "name": "Tommy Tremble",
     "team": "CAR",
     "pos": "TE",
-    "adp": 169.94,
-    "espnPerGame": {
+    "adp": 169.95,
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -13612,8 +13990,9 @@
     "name": "New York Giants",
     "team": "NYG",
     "pos": "DST",
-    "adp": 169.54,
-    "espnPerGame": {
+    "adp": 169.58,
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -13649,7 +14028,8 @@
     "team": "LAR",
     "pos": "WR",
     "adp": 169.97,
-    "espnPerGame": {
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -13684,8 +14064,9 @@
     "name": "Joe Flacco",
     "team": "CIN",
     "pos": "QB",
-    "adp": 169.94,
-    "espnPerGame": {
+    "adp": 169.95,
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": 1.5,
       "completions": 0.9,
       "passYards": 9.7,
@@ -13721,7 +14102,8 @@
     "team": "LAR",
     "pos": "WR",
     "adp": 169.96,
-    "espnPerGame": {
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -13757,7 +14139,8 @@
     "team": "BAL",
     "pos": "WR",
     "adp": 169.96,
-    "espnPerGame": {
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -13792,8 +14175,9 @@
     "name": "Jam Miller",
     "team": "NE",
     "pos": "RB",
-    "adp": 0,
-    "espnPerGame": {
+    "adp": null,
+    "projectionProvider": null,
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -13828,8 +14212,9 @@
     "name": "J'Mari Taylor",
     "team": "JAC",
     "pos": "RB",
-    "adp": 0,
-    "espnPerGame": {
+    "adp": null,
+    "projectionProvider": null,
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -13864,8 +14249,9 @@
     "name": "Phil Mafah",
     "team": "DAL",
     "pos": "RB",
-    "adp": 0,
-    "espnPerGame": {
+    "adp": null,
+    "projectionProvider": null,
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -13901,7 +14287,8 @@
     "team": "ATL",
     "pos": "TE",
     "adp": 169.98,
-    "espnPerGame": {
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -13936,8 +14323,9 @@
     "name": "Trey Smack",
     "team": "GB",
     "pos": "K",
-    "adp": 167.77,
-    "espnPerGame": {
+    "adp": 167.74,
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -13972,8 +14360,9 @@
     "name": "Tampa Bay Buccaneers",
     "team": "TB",
     "pos": "DST",
-    "adp": 170.14,
-    "espnPerGame": {
+    "adp": 170.19,
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -14008,8 +14397,9 @@
     "name": "Luke Musgrave",
     "team": "GB",
     "pos": "TE",
-    "adp": 0,
-    "espnPerGame": {
+    "adp": 169.96,
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -14018,12 +14408,12 @@
       "rushAttempts": null,
       "rushYards": null,
       "rushTds": null,
-      "targets": null,
-      "receptions": null,
-      "receivingYards": null,
-      "receivingTds": null,
-      "fumblesLost": null,
-      "twoPointConversions": null,
+      "targets": 0.6,
+      "receptions": 0.4,
+      "receivingYards": 4,
+      "receivingTds": 0,
+      "fumblesLost": 0,
+      "twoPointConversions": 0,
       "patMade": null,
       "fgMissed": null,
       "fgMade0to39": null,
@@ -14045,7 +14435,8 @@
     "team": "IND",
     "pos": "WR",
     "adp": 169.99,
-    "espnPerGame": {
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -14080,8 +14471,9 @@
     "name": "Demarcus Robinson",
     "team": "SF",
     "pos": "WR",
-    "adp": 169.97,
-    "espnPerGame": {
+    "adp": 169.98,
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -14116,8 +14508,9 @@
     "name": "Joe Milton III",
     "team": "DAL",
     "pos": "QB",
-    "adp": 0,
-    "espnPerGame": {
+    "adp": 169.94,
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -14152,8 +14545,9 @@
     "name": "John Metchie III",
     "team": "CAR",
     "pos": "WR",
-    "adp": 0,
-    "espnPerGame": {
+    "adp": 169.99,
+    "projectionProvider": null,
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -14188,8 +14582,9 @@
     "name": "Tennessee Titans",
     "team": "TEN",
     "pos": "DST",
-    "adp": 169.94,
-    "espnPerGame": {
+    "adp": 169.92,
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -14224,8 +14619,9 @@
     "name": "Zane Gonzalez",
     "team": "FA",
     "pos": "K",
-    "adp": 0,
-    "espnPerGame": {
+    "adp": null,
+    "projectionProvider": null,
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -14260,8 +14656,9 @@
     "name": "Mitchell Evans",
     "team": "CAR",
     "pos": "TE",
-    "adp": 0,
-    "espnPerGame": {
+    "adp": null,
+    "projectionProvider": null,
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -14296,8 +14693,9 @@
     "name": "Cincinnati Bengals",
     "team": "CIN",
     "pos": "DST",
-    "adp": 169.85,
-    "espnPerGame": {
+    "adp": 169.79,
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -14332,8 +14730,9 @@
     "name": "Jerome Ford",
     "team": "WAS",
     "pos": "RB",
-    "adp": 0,
-    "espnPerGame": {
+    "adp": null,
+    "projectionProvider": null,
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -14368,8 +14767,9 @@
     "name": "Chris Brazzell II",
     "team": "CAR",
     "pos": "WR",
-    "adp": 0,
-    "espnPerGame": {
+    "adp": null,
+    "projectionProvider": null,
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -14404,8 +14804,9 @@
     "name": "Jayden Higgins",
     "team": "HOU",
     "pos": "WR",
-    "adp": 0,
-    "espnPerGame": {
+    "adp": null,
+    "projectionProvider": null,
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
@@ -14440,8 +14841,9 @@
     "name": "Ricky Pearsall",
     "team": "SF",
     "pos": "WR",
-    "adp": 0,
-    "espnPerGame": {
+    "adp": 169.93,
+    "projectionProvider": "ESPN",
+    "projectedStatsPerGame": {
       "passAttempts": null,
       "completions": null,
       "passYards": null,
