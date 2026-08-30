@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#123f34" />
+    <meta name="description" content="The public 2026 NYFL live draft board." />
+    <title>NYFL Live Draft Board ’26</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;600;700;800&family=Libre+Caslon+Display&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="masthead">
+        <div class="brand-mark">N</div>
+        <div class="brand-copy"><span>NEW YORK FANTASY LEAGUE</span><h1>Live Draft Board <em>’26</em></h1></div>
+        <div class="live-status"><i></i><div><b>Board live</b><small id="updated-label">Connecting…</small></div></div>
+        <button class="outline-button" id="host-button">Host controls</button>
+      </header>
+
+      <section class="score-strip" aria-label="Draft status">
+        <div><span>FORMAT</span><b>12 teams · 16 rounds</b></div>
+        <div><span>KEEPERS</span><b>36 locked</b></div>
+        <div><span>LIVE PICKS</span><b id="pick-count">0 / 156</b></div>
+        <div><span>ON THE CLOCK</span><b id="clock-summary">Loading…</b></div>
+      </section>
+
+      <main>
+        <section class="command-card">
+          <div><p class="eyebrow">CURRENT PICK</p><h2 id="on-clock-team">Loading the room…</h2><p id="on-clock-detail">The board skips every locked keeper slot automatically.</p></div>
+          <div class="recent-picks" id="recent-picks"></div>
+        </section>
+
+        <section class="host-panel" id="host-panel" hidden>
+          <header><div><p class="eyebrow">HOST MODE</p><h2>Announce the next selection</h2></div><span>Private controls · key stays in this browser session</span></header>
+          <div class="host-toolbar">
+            <label class="search-box"><span>SEARCH PLAYER</span><input id="player-search" autocomplete="off" placeholder="Start typing a player…" /></label>
+            <label><span>POSITION</span><select id="position-filter"><option>ALL</option><option>QB</option><option>RB</option><option>WR</option><option>TE</option><option>K</option><option>DST</option></select></label>
+            <button class="secondary-button" id="undo-button">Undo last</button>
+            <button class="danger-button" id="reset-button">Reset board</button>
+          </div>
+          <div class="player-results" id="player-results"></div>
+        </section>
+
+        <section class="board-section">
+          <header><div><p class="eyebrow">OFFICIAL DRAFT ROOM</p><h2>Keepers, live picks, and every open slot</h2></div><div class="legend"><span><i class="keeper-dot"></i>Locked keeper</span><span><i class="pick-dot"></i>Live pick</span><span><i class="clock-dot"></i>On clock</span></div></header>
+          <div class="board-scroll"><table class="draft-board" id="draft-board"></table></div>
+        </section>
+
+        <section class="order-section">
+          <header><div><p class="eyebrow">2026 ORDER</p><h2>Official NYFL draft positions</h2></div><p>Snake order reverses in every even round.</p></header>
+          <div class="order-grid" id="order-grid"></div>
+        </section>
+      </main>
+
+      <footer><span>NYFL · 2026</span><p>Public league board. No private rankings, watchlists, projections, notes, or draft-prep models are included.</p></footer>
+    </div>
+
+    <dialog id="host-dialog">
+      <form method="dialog" id="host-form">
+        <button class="dialog-close" value="cancel" aria-label="Close">×</button>
+        <p class="eyebrow">HOST ACCESS</p><h2>Unlock draft controls</h2>
+        <p>Enter the private key configured in Netlify. Everyone else stays in the automatically refreshing viewer mode.</p>
+        <label><span>HOST KEY</span><input id="host-key-input" type="password" autocomplete="current-password" required /></label>
+        <button class="primary-button" value="default">Unlock controls</button>
+        <small id="host-error"></small>
+      </form>
+    </dialog>
+
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+    <script type="module" src="/app.js"></script>
+  </body>
+</html>
