@@ -1,5 +1,2 @@
-allowBuilds:
-  esbuild: true
-  netlify-cli: true
-  sharp: true
-  unix-dgram: false
+packages:
+  - "."
