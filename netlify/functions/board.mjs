@@ -1,4 +1,5 @@
 import { getStore } from "@netlify/blobs";
+import { timingSafeEqual } from "node:crypto";
 
 const teams = [
   { id: "taffet", slot: 1, team: "Matt's Monstrous Team", manager: "Matt Taffet" },
@@ -33,50 +34,75 @@ const keepers = [
 const defaultBoard = () => ({ season: 2026, teams, keepers, picks: [], revision: 0, updatedAt: null });
 const json = (data, init = {}) => Response.json(data, { ...init, headers: { "Cache-Control": "no-store", ...(init.headers || {}) } });
 
-function cleanPicks(value) {
-  if (!Array.isArray(value)) return [];
-  const seenSlots = new Set();
+const keeperSlots = new Set(keepers.map((keeper) => `${keeper.round}:${keeper.teamId}`));
+const openSchedule = [];
+for (let round = 1; round <= 16; round += 1) {
+  for (let pick = 1; pick <= 12; pick += 1) {
+    const draftSlot = round % 2 ? pick : 13 - pick;
+    const team = teams.find((item) => item.slot === draftSlot);
+    if (!keeperSlots.has(`${round}:${team.id}`)) openSchedule.push({ round, teamId: team.id });
+  }
+}
+
+function validatePicks(value) {
+  if (!Array.isArray(value)) return { picks: [], error: "Picks must be an array." };
   const seenPlayers = new Set(keepers.map((keeper) => keeper.player.toLowerCase()));
-  return value.slice(0, 156).flatMap((pick) => {
+  const picks = [];
+  for (const [index, pick] of value.slice(0, openSchedule.length).entries()) {
+    const expected = openSchedule[index];
     const teamId = String(pick?.teamId || "");
     const round = Number(pick?.round);
     const player = String(pick?.player || "").trim().slice(0, 80);
     const pos = String(pick?.pos || "").toUpperCase().slice(0, 3);
     const nflTeam = String(pick?.nflTeam || "").toUpperCase().slice(0, 4);
-    const slotKey = `${round}:${teamId}`;
     const playerKey = player.toLowerCase();
-    if (!teams.some((team) => team.id === teamId) || round < 1 || round > 16 || !player || !["QB", "RB", "WR", "TE", "K", "DST"].includes(pos)) return [];
-    if (keepers.some((keeper) => keeper.teamId === teamId && keeper.round === round) || seenSlots.has(slotKey) || seenPlayers.has(playerKey)) return [];
-    seenSlots.add(slotKey);
+    if (!expected || teamId !== expected.teamId || round !== expected.round) return { picks: [], error: `Pick ${index + 1} is out of sequence.` };
+    if (!player || !["QB", "RB", "WR", "TE", "K", "DST"].includes(pos)) return { picks: [], error: `Pick ${index + 1} has invalid player data.` };
+    if (seenPlayers.has(playerKey)) return { picks: [], error: `${player} is already rostered.` };
     seenPlayers.add(playerKey);
-    return [{ teamId, round, player, pos, nflTeam }];
-  });
+    picks.push({ teamId, round, player, pos, nflTeam });
+  }
+  if (value.length > openSchedule.length) return { picks: [], error: "The live-pick limit was exceeded." };
+  return { picks, error: null };
+}
+
+function authorized(request) {
+  const expected = process.env.NYFL_BOARD_EDIT_KEY || "";
+  const supplied = request.headers.get("x-nyfl-board-key") || "";
+  const expectedBytes = Buffer.from(expected);
+  const suppliedBytes = Buffer.from(supplied);
+  return Boolean(expected) && expectedBytes.length === suppliedBytes.length && timingSafeEqual(expectedBytes, suppliedBytes);
 }
 
 export default async (request) => {
   const store = getStore({ name: "nyfl-public-board", consistency: "strong" });
-  const saved = await store.get("2026-live-board", { type: "json", consistency: "strong" });
-  const current = saved || defaultBoard();
+  const entry = await store.getWithMetadata("2026-live-board", { type: "json", consistency: "strong" });
+  const saved = entry?.data;
+  const savedPicks = validatePicks(saved?.picks || []).picks;
+  const current = { ...defaultBoard(), picks: savedPicks, revision: Number(saved?.revision || 0), updatedAt: saved?.updatedAt || null };
 
   if (request.method === "GET") return json(current);
   if (!["POST", "PUT"].includes(request.method)) return json({ error: "Method not allowed" }, { status: 405, headers: { Allow: "GET, POST, PUT" } });
+  if (!process.env.NYFL_BOARD_EDIT_KEY) return json({ error: "Host controls are not configured yet." }, { status: 503 });
+  if (!authorized(request)) return json({ error: "Incorrect host key." }, { status: 401 });
+  if (request.method === "POST") return json({ ok: true });
 
   let body;
   try { body = await request.json(); } catch { return json({ error: "Invalid request" }, { status: 400 }); }
-  const expectedKey = process.env.NYFL_BOARD_EDIT_KEY;
-  if (!expectedKey) return json({ error: "Host controls are not configured yet." }, { status: 503 });
-  if (typeof body?.editKey !== "string" || body.editKey !== expectedKey) return json({ error: "Incorrect host key." }, { status: 401 });
-  if (request.method === "POST") return json({ ok: true });
+  if (Number(body.revision) !== current.revision) return json({ error: "The board changed on another device. It has been refreshed; try again." }, { status: 409 });
+  const validated = validatePicks(body.picks);
+  if (validated.error) return json({ error: validated.error }, { status: 400 });
 
   const next = {
     season: 2026,
     teams,
     keepers,
-    picks: cleanPicks(body.picks),
+    picks: validated.picks,
     revision: Number(current.revision || 0) + 1,
     updatedAt: new Date().toISOString(),
   };
-  await store.setJSON("2026-live-board", next);
+  const write = await store.setJSON("2026-live-board", next, entry?.etag ? { onlyIfMatch: entry.etag } : { onlyIfNew: true });
+  if (!write.modified) return json({ error: "The board changed on another device. Refresh and try again." }, { status: 409 });
   return json(next);
 };
 
