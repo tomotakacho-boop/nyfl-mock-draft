@@ -3,12 +3,16 @@ const MOCK_SELECTIONS = 156;
 const STARTER_REQUIREMENTS = { QB: 1, RB: 2, WR: 2, TE: 1, FLEX: 1, DST: 1, K: 1 };
 const POSITION_LIMITS = { QB: 2, RB: 6, WR: 6, TE: 2, DST: 1, K: 1 };
 const CPU_PICK_DELAY = 260;
+const CPU_ARCHETYPES = ["Balanced", "RB Aggressor", "WR Wave", "Zero-RB", "Late-QB", "Upside Hunter"];
 
 let board;
 let players = [];
 let methodology = null;
 let selectedTeamId = localStorage.getItem("nyfl-roster-team") || "cho";
 let cpuMode = localStorage.getItem("nyfl-cpu-mode") === "automatic" ? "automatic" : "manual";
+let draftStarted = false;
+let draftSeed = Date.now();
+let cpuPersonalities = [];
 let cpuTimer = null;
 let cpuBusy = false;
 let sortKey = "adp";
@@ -17,6 +21,7 @@ let sortDirection = "asc";
 const $ = (selector) => document.querySelector(selector);
 const escapeHTML = (value = "") => String(value).replace(/[&<>'"]/g, (char) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", "'": "&#39;", '"': "&quot;" }[char]));
 const format = (value, digits = 1) => value !== null && value !== undefined && value !== "" && Number.isFinite(Number(value)) ? Number(value).toFixed(digits) : "—";
+const marketAdp = (player) => player?.adp !== null && player?.adp !== undefined && player?.adp !== "" && Number.isFinite(Number(player.adp)) ? Number(player.adp) : 9999;
 
 const defaultTeams = [
   ["taffet", 1, "Matt's Monstrous Team", "Matt Taffet"], ["watts", 2, "U Dont Call Them Pollard People", "Josh Watts"],
@@ -71,54 +76,96 @@ function teamEntries(teamId) {
 
 function isAutomaticCpuTurn() {
   const slot = nextSlot();
-  return cpuMode === "automatic" && Boolean(slot) && slot.team.id !== selectedTeamId;
+  return draftStarted && cpuMode === "automatic" && Boolean(slot) && slot.team.id !== selectedTeamId;
 }
 
-function missingRequiredPositions(entries) {
-  const counts = entries.reduce((result, entry) => ({ ...result, [entry.pos]: (result[entry.pos] || 0) + 1 }), {});
-  return ["QB", "RB", "RB", "WR", "WR", "TE", "DST", "K"].filter((pos, index, all) => {
-    const occurrence = all.slice(0, index + 1).filter((item) => item === pos).length;
-    return occurrence > (counts[pos] || 0);
-  });
+function clamp(value, minimum, maximum) {
+  return Math.min(maximum, Math.max(minimum, value));
+}
+
+function seededRandom(seed) {
+  let value = seed >>> 0;
+  return () => {
+    value += 0x6D2B79F5;
+    let result = value;
+    result = Math.imul(result ^ result >>> 15, result | 1);
+    result ^= result + Math.imul(result ^ result >>> 7, result | 61);
+    return ((result ^ result >>> 14) >>> 0) / 4294967296;
+  };
+}
+
+function buildCpuPersonalities(seed) {
+  const random = seededRandom(seed);
+  const opponents = board.teams.filter((team) => team.id !== selectedTeamId);
+  const shuffled = [...opponents];
+  for (let index = shuffled.length - 1; index > 0; index -= 1) {
+    const swap = Math.floor(random() * (index + 1));
+    [shuffled[index], shuffled[swap]] = [shuffled[swap], shuffled[index]];
+  }
+  const creativeTeams = new Set(shuffled.slice(0, random() < 0.55 ? 1 : 2).map((team) => team.id));
+  return board.teams.map((team, index) => ({
+    teamId: team.id,
+    score: team.id === selectedTeamId ? 0 : creativeTeams.has(team.id) ? 68 + Math.round(random() * 18) : 10 + Math.round(random() * 36),
+    archetype: team.id === selectedTeamId ? "Human control" : CPU_ARCHETYPES[(index + Math.floor(random() * CPU_ARCHETYPES.length)) % CPU_ARCHETYPES.length],
+  }));
 }
 
 function chooseCpuPlayer(slot) {
   const used = usedPlayers();
   const entries = teamEntries(slot.team.id);
   const counts = entries.reduce((result, entry) => ({ ...result, [entry.pos]: (result[entry.pos] || 0) + 1 }), {});
-  const missing = missingRequiredPositions(entries);
-  const remainingSlots = ROUNDS - entries.length;
-  const mustFill = remainingSlots <= missing.length ? new Set(missing) : null;
-  let candidates = players.filter((player) => !used.has(player.name.toLowerCase()));
-  candidates = candidates.filter((player) => !POSITION_LIMITS[player.pos] || (counts[player.pos] || 0) < POSITION_LIMITS[player.pos]);
-  if (mustFill) candidates = candidates.filter((player) => mustFill.has(player.pos));
-  if (!candidates.length) candidates = players.filter((player) => !used.has(player.name.toLowerCase()));
-
-  const scored = candidates.map((player) => {
-    const posCount = counts[player.pos] || 0;
-    const round = slot.round;
-    let score = Number.isFinite(Number(player.adp)) ? Number(player.adp) : 500;
-    score += Math.random() * 8;
-    if (["RB", "WR"].includes(player.pos) && posCount < 2) score -= 18;
-    if (["RB", "WR"].includes(player.pos) && round <= 6 && posCount < 3) score -= 7;
-    if (player.pos === "QB") {
-      if (round <= 2) score += 32;
-      if (posCount === 0 && round >= 6) score -= Math.min(30, (round - 5) * 5);
-      if (posCount >= 1 && round < 13) score += 90;
-    }
-    if (player.pos === "TE") {
-      if (round <= 2) score += 24;
-      if (posCount === 0 && round >= 7) score -= 20;
-      if (posCount >= 1 && round < 13) score += 75;
-    }
-    if (["K", "DST"].includes(player.pos)) {
-      if (round < 13) score += 350;
-      if (round >= 15 && posCount === 0) score -= 70;
-    }
-    return { player, score };
+  const personality = cpuPersonalities.find((item) => item.teamId === slot.team.id) || { score: 20, archetype: "Balanced" };
+  const random = seededRandom(draftSeed + slot.overall * 7919 + slot.team.slot);
+  const byMarket = players
+    .filter((player) => !used.has(player.name.toLowerCase()))
+    .sort((a, b) => marketAdp(a) - marketAdp(b) || a.name.localeCompare(b.name));
+  const viable = byMarket.filter((player) => {
+    if (slot.round <= 11 && ["K", "DST"].includes(player.pos)) return false;
+    if (POSITION_LIMITS[player.pos] && (counts[player.pos] || 0) >= POSITION_LIMITS[player.pos]) return false;
+    if (slot.round <= 3 && ["RB", "WR"].includes(player.pos) && (counts[player.pos] || 0) >= 2) return false;
+    if (slot.round <= 5 && ["QB", "TE"].includes(player.pos) && (counts[player.pos] || 0) >= 1) return false;
+    return true;
   });
-  scored.sort((a, b) => a.score - b.score || Number(a.player.adp || 9999) - Number(b.player.adp || 9999));
-  return scored[0]?.player;
+
+  const missingSpecialists = ["DST", "K"].filter((position) => !(counts[position] || 0));
+  let forcedPositions = [];
+  if (!(counts.QB || 0) && (slot.round >= 10 || entries.length >= 9)) forcedPositions = ["QB"];
+  else if (!(counts.TE || 0) && (slot.round >= 11 || entries.length >= 10)) forcedPositions = ["TE"];
+  else if (slot.round >= 12 && missingSpecialists.length === 2 && entries.length >= 13) forcedPositions = missingSpecialists;
+  else if (slot.round >= 12 && missingSpecialists.length === 1 && entries.length >= 14) forcedPositions = missingSpecialists;
+
+  const logicalPool = forcedPositions.length ? viable.filter((player) => forcedPositions.includes(player.pos)) : viable;
+  const pool = logicalPool.length ? logicalPool : viable.length ? viable : byMarket;
+  const windowSize = Math.round(clamp(4 + personality.score * 0.15, 5, 19));
+  const candidates = pool.slice(0, windowSize);
+  if (!candidates.length) return null;
+
+  const weights = candidates.map((player, index) => {
+    let need = 1;
+    if (player.pos === "RB" && (counts.RB || 0) < 2 && slot.round <= 7) need *= 1.75;
+    if (player.pos === "WR" && (counts.WR || 0) < 2 && slot.round <= 7) need *= 1.75;
+    if (["RB", "WR"].includes(player.pos) && ((counts.RB || 0) + (counts.WR || 0)) < 6 && slot.round >= 6) need *= 1.35;
+    if (player.pos === "QB" && !(counts.QB || 0) && slot.round >= 7) need *= 2.15;
+    if (player.pos === "TE" && !(counts.TE || 0) && slot.round >= 8) need *= 1.95;
+    if (player.pos === "QB" && (counts.QB || 0) === 1) need *= slot.round <= 11 ? 0.38 : 0.65;
+    if (player.pos === "TE" && (counts.TE || 0) >= 1) need *= slot.round <= 9 ? 0.55 : 0.82;
+    if (["RB", "WR"].includes(player.pos) && (counts[player.pos] || 0) >= 4 && slot.round <= 10) need *= 0.62;
+    if (["K", "DST"].includes(player.pos) && slot.round >= 12 && !(counts[player.pos] || 0)) need *= 5;
+    if (personality.archetype === "RB Aggressor" && player.pos === "RB" && slot.round <= 9) need *= 1.55;
+    if (personality.archetype === "WR Wave" && player.pos === "WR" && slot.round <= 9) need *= 1.55;
+    if (personality.archetype === "Zero-RB" && slot.round <= 5) need *= player.pos === "RB" ? 0.48 : ["WR", "TE"].includes(player.pos) ? 1.45 : 1;
+    if (personality.archetype === "Late-QB" && player.pos === "QB") need *= slot.round <= 7 ? 0.18 : !(counts.QB || 0) ? 2.2 : 1;
+    const randomness = 0.85 + random() * 0.3;
+    const rankWeight = Math.exp(-index / (1.4 + personality.score / 17));
+    return Math.max(0.001, need * randomness * rankWeight);
+  });
+  const total = weights.reduce((sum, weight) => sum + weight, 0);
+  let draw = random() * total;
+  for (let index = 0; index < candidates.length; index += 1) {
+    draw -= weights[index];
+    if (draw <= 0) return candidates[index];
+  }
+  return candidates[0];
 }
 
 function toast(message, danger = false) {
@@ -132,12 +179,20 @@ function toast(message, danger = false) {
 
 function renderStatus() {
   const slot = nextSlot();
-  const isComplete = !slot;
+  const isComplete = draftStarted && !slot;
   $("#player-pool-section").hidden = isComplete;
   $("#pick-count").textContent = `${board.picks.length} / ${MOCK_SELECTIONS}`;
   $("#updated-label").textContent = board.updatedAt
     ? `Saved ${new Date(board.updatedAt).toLocaleTimeString([], { hour: "numeric", minute: "2-digit" })}`
     : "Ready for a new mock";
+  if (!draftStarted) {
+    $("#clock-summary").textContent = "Waiting to start";
+    $("#on-clock-team").textContent = "Choose your team and CPU mode";
+    $("#on-clock-detail").textContent = "Changing teams resets the mock. Press Start draft when the setup is correct.";
+    $("#round-number").textContent = "1";
+    $("#round-pick").textContent = "Ready at overall #1";
+    return;
+  }
   if (!slot) {
     $("#clock-summary").textContent = "Draft complete";
     $("#on-clock-team").textContent = "The 2026 NYFL draft is complete";
@@ -159,12 +214,18 @@ function renderCpuControls() {
     const active = button.dataset.cpuMode === cpuMode;
     button.classList.toggle("active", active);
     button.setAttribute("aria-pressed", String(active));
+    button.disabled = draftStarted;
   });
   const team = board.teams.find((item) => item.id === selectedTeamId) || board.teams[0];
+  const startButton = $("#start-draft-button");
+  startButton.disabled = draftStarted;
+  startButton.textContent = draftStarted ? "Draft in progress" : "Start draft";
   $("#roster-team-label").textContent = cpuMode === "automatic" ? "VIEW / CONTROL" : "VIEW TEAM";
-  $("#cpu-mode-note").textContent = cpuMode === "automatic"
-    ? `${team.team} is under your control. The other 11 teams draft automatically until your next turn.`
-    : "You control every team and make every selection. No CPU picks run in the background.";
+  $("#cpu-mode-note").textContent = !draftStarted
+    ? `${team.team} will be your mock team. ${cpuMode === "automatic" ? "The original strategic CPU model will run the other 11 teams." : "You will make every selection manually."}`
+    : cpuMode === "automatic"
+      ? `${team.team} is under your control. Strategic CPUs run until your next turn.`
+      : "Manual draft in progress. You control every team and every selection.";
 }
 
 function renderRosterSelector() {
@@ -201,8 +262,8 @@ function renderRoster() {
 function renderRecent() {
   const recent = schedule().map((slot) => ({ slot, pick: pickAt(slot) })).filter(({ pick }) => pick).slice(-6);
   $("#recent-count").textContent = `${board.picks.length} mock pick${board.picks.length === 1 ? "" : "s"} recorded`;
-  const clock = nextSlot();
-  $("#recent-picks").innerHTML = `${recent.map(({ slot, pick }) => `<article><span>#${slot.overall}</span><strong>${escapeHTML(pick.player)}</strong><small>${escapeHTML(slot.team.team)} · ${escapeHTML(pick.pos)}</small></article>`).join("")}${clock ? `<article class="ticker-clock"><span>NEXT</span><strong>${escapeHTML(clock.team.team)}</strong><small>Scheduled #${clock.overall}</small></article>` : `<article class="ticker-clock"><span>FINAL</span><strong>Draft complete</strong><small>All picks recorded</small></article>`}`;
+  const clock = draftStarted ? nextSlot() : null;
+  $("#recent-picks").innerHTML = `${recent.map(({ slot, pick }) => `<article><span>#${slot.overall}</span><strong>${escapeHTML(pick.player)}</strong><small>${escapeHTML(slot.team.team)} · ${escapeHTML(pick.pos)}</small></article>`).join("")}${clock ? `<article class="ticker-clock"><span>NEXT</span><strong>${escapeHTML(clock.team.team)}</strong><small>Scheduled #${clock.overall}</small></article>` : !draftStarted ? `<article class="ticker-clock"><span>READY</span><strong>Start at pick #1</strong><small>No CPU picks run before Start draft</small></article>` : `<article class="ticker-clock"><span>FINAL</span><strong>Draft complete</strong><small>All picks recorded</small></article>`}`;
 }
 
 const sortColumns = [["name", "PLAYER"], ["pos", "POS"], ["adp", "ADP"]];
@@ -254,10 +315,11 @@ function renderPlayers() {
     .sort(comparePlayers);
   const current = nextSlot();
   const cpuTurn = isAutomaticCpuTurn();
+  const selectionDisabled = !draftStarted || cpuTurn || !current;
   $("#player-result-count").textContent = `Showing ${matches.length} available players`;
   $("#player-table-body").innerHTML = matches.map((player) => {
     return `<tr>
-      <td><button class="remove-button" data-player-id="${escapeHTML(player.id)}" ${cpuTurn ? "disabled" : ""}><b>${cpuTurn ? "CPU" : "DRAFT"}</b><small>${cpuTurn ? "Selecting…" : current ? `Pick #${current.overall}` : "Complete"}</small></button></td>
+      <td><button class="remove-button" data-player-id="${escapeHTML(player.id)}" ${selectionDisabled ? "disabled" : ""}><b>${!draftStarted ? "START FIRST" : cpuTurn ? "CPU" : "DRAFT"}</b><small>${!draftStarted ? "Setup" : cpuTurn ? "Selecting…" : current ? `Pick #${current.overall}` : "Complete"}</small></button></td>
       <td><div class="player-identity"><span class="player-photo" style="background-image:url('${playerPhoto(player)}')"><i>${escapeHTML(player.pos)}</i></span><span><b>${escapeHTML(player.name)}</b><small>${escapeHTML(player.team)}</small></span></div></td>
       <td><i class="pos pos-${escapeHTML(player.pos)}">${escapeHTML(player.pos)}</i></td>
       <td><b>${format(player.adp)}</b></td><td><div class="espn-stat-line">${projectedStatLine(player)}</div></td>
@@ -266,7 +328,7 @@ function renderPlayers() {
 }
 
 function renderBoard() {
-  const current = nextSlot();
+  const current = draftStarted ? nextSlot() : null;
   const head = `<thead><tr><th>Round</th>${board.teams.map((team) => `<th><span>#${team.slot}</span><b>${escapeHTML(team.team)}</b><small>${escapeHTML(team.manager)}</small></th>`).join("")}</tr></thead>`;
   const body = Array.from({ length: ROUNDS }, (_, index) => index + 1).map((round) => `<tr><th>R${round}</th>${board.teams.map((team) => {
     const slot = schedule().find((item) => item.round === round && item.team.id === team.id);
@@ -300,9 +362,31 @@ function render() {
 
 async function commitPicks(nextPicks, successMessage = "") {
   board = { ...board, picks: nextPicks, revision: Number(board.revision || 0) + 1, updatedAt: new Date().toISOString() };
-  localStorage.setItem("nyfl-mock-draft-2026", JSON.stringify({ picks: board.picks, revision: board.revision, updatedAt: board.updatedAt }));
+  persistMock();
   if (successMessage) toast(successMessage);
   render();
+}
+
+function persistMock() {
+  localStorage.setItem("nyfl-mock-draft-2026", JSON.stringify({
+    picks: board.picks,
+    revision: board.revision,
+    updatedAt: board.updatedAt,
+    started: draftStarted,
+    seed: draftSeed,
+  }));
+}
+
+function returnToSetup(message = "Mock reset. Choose a team and mode, then press Start draft.") {
+  clearTimeout(cpuTimer);
+  cpuBusy = false;
+  draftStarted = false;
+  draftSeed = Date.now();
+  cpuPersonalities = [];
+  board = { ...board, picks: [], revision: Number(board.revision || 0) + 1, updatedAt: null };
+  persistMock();
+  render();
+  if (message) toast(message);
 }
 
 function queueCpuPick() {
@@ -333,17 +417,29 @@ document.querySelectorAll("[data-view]").forEach((button) => button.addEventList
 $("#roster-team-select").addEventListener("change", (event) => {
   selectedTeamId = event.target.value;
   localStorage.setItem("nyfl-roster-team", selectedTeamId);
-  render();
+  returnToSetup("Team changed. The mock reset to pick #1; choose a CPU mode and press Start draft.");
 });
 
 document.querySelector(".cpu-mode-switch").addEventListener("click", (event) => {
   const button = event.target.closest("[data-cpu-mode]");
   if (!button || button.dataset.cpuMode === cpuMode) return;
+  if (draftStarted) return toast("Reset the draft before changing CPU mode.", true);
   clearTimeout(cpuTimer);
   cpuMode = button.dataset.cpuMode;
   localStorage.setItem("nyfl-cpu-mode", cpuMode);
   render();
-  toast(cpuMode === "automatic" ? "Automatic CPUs enabled." : "CPU drafting paused. Manual control enabled.");
+  toast(cpuMode === "automatic" ? "Automatic CPUs selected. Press Start draft when ready." : "Manual CPUs selected. Press Start draft when ready.");
+});
+
+$("#start-draft-button").addEventListener("click", () => {
+  if (draftStarted) return;
+  board = { ...board, picks: [], revision: Number(board.revision || 0) + 1, updatedAt: new Date().toISOString() };
+  draftSeed = Date.now();
+  cpuPersonalities = buildCpuPersonalities(draftSeed);
+  draftStarted = true;
+  persistMock();
+  render();
+  toast(cpuMode === "automatic" ? "Draft started. Strategic CPUs are on." : "Draft started in full manual mode.");
 });
 
 $("#player-search").addEventListener("input", renderPlayers);
@@ -364,6 +460,7 @@ $("#player-table-body").addEventListener("click", async (event) => {
   if (!button) return;
   const player = players.find((item) => item.id === button.dataset.playerId);
   const slot = nextSlot();
+  if (!draftStarted) return toast("Choose a team and CPU mode, then press Start draft.", true);
   if (!player || !slot) return toast("The draft is complete.", true);
   if (isAutomaticCpuTurn()) return toast("The CPU is making this selection. Switch to Manual CPUs to take over.", true);
   const nextPicks = [...board.picks, { teamId: slot.team.id, round: slot.round, player: player.name, pos: player.pos, nflTeam: player.team }];
@@ -378,12 +475,16 @@ $("#undo-button").addEventListener("click", async () => {
 
 $("#reset-button").addEventListener("click", async () => {
   if (!confirm("Reset every mock selection? The 36 locked keepers will remain.")) return;
-  await commitPicks([], "The mock draft was reset.");
+  returnToSetup();
 });
 
 async function start() {
   const saved = JSON.parse(localStorage.getItem("nyfl-mock-draft-2026") || "null");
-  board = { ...fallbackBoard(), picks: Array.isArray(saved?.picks) ? saved.picks : [], revision: Number(saved?.revision || 0), updatedAt: saved?.updatedAt || null };
+  const supportsSetupFlow = typeof saved?.started === "boolean";
+  board = { ...fallbackBoard(), picks: supportsSetupFlow && Array.isArray(saved?.picks) ? saved.picks : [], revision: Number(saved?.revision || 0), updatedAt: supportsSetupFlow ? saved?.updatedAt || null : null };
+  draftStarted = supportsSetupFlow && Boolean(saved.started);
+  draftSeed = Number(saved?.seed) || Date.now();
+  cpuPersonalities = buildCpuPersonalities(draftSeed);
   try {
     [players, methodology] = await Promise.all([
       fetch("/data/players.json").then((response) => response.ok ? response.json() : Promise.reject()),

@@ -7,8 +7,9 @@ A separate, shareable NYFL mock-draft site. Every visitor runs an independent mo
 - Official 12-team NYFL draft order
 - All 36 locked 2026 keepers and their rounds
 - Browser-local drafting, undo, reset, current clock, recent picks, full board, and team roster selector
-- A persistent Automatic CPUs / Manual CPUs toggle
-- Automatic opponents driven by ESPN ADP, roster needs, position caps, and controlled variation
+- A pre-draft setup flow: choose a manager, choose Automatic or Manual CPUs, then press Start draft
+- Automatic opponents driven by the original board’s seeded personality engine, ESPN ADP, roster deadlines, position caps, and controlled variation
+- Automatic reset to overall pick #1 whenever the controlled manager changes
 - A fixed-height, internally scrollable available-player pool during the mock
 - A position-colored full mock board that remains visible at the bottom throughout the draft
 - An automatic completion view that hides the available-player pool while leaving the completed board visible
@@ -16,13 +17,15 @@ A separate, shareable NYFL mock-draft site. Every visitor runs an independent mo
 - Raw 2026 projected statistics per game with the provider labeled
 - A Methodology & Sources tab
 
-The repository does **not** contain personal notes, watchlist labels, player flags, custom ranks, tiers, deltas, fantasy-point projections, PPG, confidence scores, injury models, availability odds, recommendation logic, simulations, projected paths, or decision-support panels.
+The repository does **not** contain personal notes, watchlist labels, player flags, custom ranks, tiers, deltas, fantasy-point projections, PPG, confidence scores, injury models, availability odds, projected team paths, or private decision-support panels. Its only simulation logic is the public opponent-pick engine used to run the mock.
 
 ## How mock state works
 
 Selections are saved to the browser’s `localStorage`. There are no host controls, edit keys, server functions, or shared state. Opening the site on another device starts a separate mock draft.
 
-The CPU mode is browser-local too. In **Automatic CPUs**, the team selected in the roster control is the human team and the other 11 teams draft automatically. In **Manual CPUs**, the user makes every selection.
+The CPU mode is browser-local too. No picks occur during setup. In **Automatic CPUs**, the team selected in the roster control is the human team and the other 11 teams draft automatically after **Start draft** is pressed. In **Manual CPUs**, the user makes every selection after starting. Changing the selected team clears the current mock and returns the board to pick #1.
+
+Automatic opponents use the same strategy family as the original private board: each CPU receives a seeded archetype and a mostly chalk creativity score, with only one or two more adventurous rooms per run. Every pick begins with the available players sorted by valid ESPN ADP; missing ADPs are sent to the back of the market. The engine then selects from a small viable window after applying roster-construction guardrails and positional deadlines.
 
 ## Deploy to GitHub and Netlify
 

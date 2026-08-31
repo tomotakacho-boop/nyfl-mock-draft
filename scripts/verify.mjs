@@ -40,9 +40,13 @@ if (!markup.includes('id="roster-team-select"')) throw new Error("The manager ro
 if (!markup.includes('data-view="methods"') || !markup.includes('id="methods-view"')) throw new Error("The methodology and sources tab is missing.");
 if (!markup.includes('id="player-pool-section"') || !markup.includes('id="board-section"')) throw new Error("The player pool or full reference board is missing.");
 if (!markup.includes('data-cpu-mode="automatic"') || !markup.includes('data-cpu-mode="manual"')) throw new Error("The automatic/manual CPU controls are missing.");
+if (!markup.includes('id="start-draft-button"')) throw new Error("The explicit Start draft control is missing.");
 if (markup.includes('id="board-section" hidden')) throw new Error("The full reference board must remain visible during the mock.");
 if (!client.includes('board-pos-${position}') || !client.includes('$("#player-pool-section").hidden = isComplete')) throw new Error("Position-colored board cells or completion switching are missing.");
 if (!client.includes("function chooseCpuPlayer") || !client.includes("function queueCpuPick") || !client.includes('localStorage.setItem("nyfl-cpu-mode"')) throw new Error("The persistent CPU mode or automated selection engine is missing.");
+if (!client.includes("function seededRandom") || !client.includes("function buildCpuPersonalities") || !client.includes("CPU_ARCHETYPES")) throw new Error("The original strategic CPU personality engine is missing.");
+if (!client.includes("marketAdp(a) - marketAdp(b)") || !client.includes("const windowSize") || !client.includes("forcedPositions")) throw new Error("The CPU market ordering or roster guardrails are incomplete.");
+if (!client.includes("if (!draftStarted) return") || !client.includes("returnToSetup(\"Team changed.")) throw new Error("Start gating or manager-change reset is missing.");
 if (markup.includes("/api/board") || client.includes("/api/board")) throw new Error("The browser-local mock still references the old shared-board API.");
 
 const keeperNames = ["Jaxon Smith-Njigba", "Brock Bowers", "Woody Marks"];
