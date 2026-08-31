@@ -1,11 +1,16 @@
 const ROUNDS = 16;
 const MOCK_SELECTIONS = 156;
 const STARTER_REQUIREMENTS = { QB: 1, RB: 2, WR: 2, TE: 1, FLEX: 1, DST: 1, K: 1 };
+const POSITION_LIMITS = { QB: 2, RB: 6, WR: 6, TE: 2, DST: 1, K: 1 };
+const CPU_PICK_DELAY = 260;
 
 let board;
 let players = [];
 let methodology = null;
 let selectedTeamId = localStorage.getItem("nyfl-roster-team") || "cho";
+let cpuMode = localStorage.getItem("nyfl-cpu-mode") === "automatic" ? "automatic" : "manual";
+let cpuTimer = null;
+let cpuBusy = false;
 let sortKey = "adp";
 let sortDirection = "asc";
 
@@ -57,6 +62,65 @@ const usedPlayers = () => new Set([...board.keepers, ...board.picks].map((item) 
 const playerByName = (name) => players.find((player) => player.name.toLowerCase() === String(name).toLowerCase());
 const playerPhoto = (player) => player?.id ? `https://images.fantasypros.com/images/players/nfl/${encodeURIComponent(player.id)}/headshot/210x210.png` : "";
 
+function teamEntries(teamId) {
+  return [...board.keepers, ...board.picks].filter((entry) => entry.teamId === teamId).map((entry) => {
+    const player = playerByName(entry.player);
+    return { ...entry, pos: entry.pos || player?.pos || "" };
+  });
+}
+
+function isAutomaticCpuTurn() {
+  const slot = nextSlot();
+  return cpuMode === "automatic" && Boolean(slot) && slot.team.id !== selectedTeamId;
+}
+
+function missingRequiredPositions(entries) {
+  const counts = entries.reduce((result, entry) => ({ ...result, [entry.pos]: (result[entry.pos] || 0) + 1 }), {});
+  return ["QB", "RB", "RB", "WR", "WR", "TE", "DST", "K"].filter((pos, index, all) => {
+    const occurrence = all.slice(0, index + 1).filter((item) => item === pos).length;
+    return occurrence > (counts[pos] || 0);
+  });
+}
+
+function chooseCpuPlayer(slot) {
+  const used = usedPlayers();
+  const entries = teamEntries(slot.team.id);
+  const counts = entries.reduce((result, entry) => ({ ...result, [entry.pos]: (result[entry.pos] || 0) + 1 }), {});
+  const missing = missingRequiredPositions(entries);
+  const remainingSlots = ROUNDS - entries.length;
+  const mustFill = remainingSlots <= missing.length ? new Set(missing) : null;
+  let candidates = players.filter((player) => !used.has(player.name.toLowerCase()));
+  candidates = candidates.filter((player) => !POSITION_LIMITS[player.pos] || (counts[player.pos] || 0) < POSITION_LIMITS[player.pos]);
+  if (mustFill) candidates = candidates.filter((player) => mustFill.has(player.pos));
+  if (!candidates.length) candidates = players.filter((player) => !used.has(player.name.toLowerCase()));
+
+  const scored = candidates.map((player) => {
+    const posCount = counts[player.pos] || 0;
+    const round = slot.round;
+    let score = Number.isFinite(Number(player.adp)) ? Number(player.adp) : 500;
+    score += Math.random() * 8;
+    if (["RB", "WR"].includes(player.pos) && posCount < 2) score -= 18;
+    if (["RB", "WR"].includes(player.pos) && round <= 6 && posCount < 3) score -= 7;
+    if (player.pos === "QB") {
+      if (round <= 2) score += 32;
+      if (posCount === 0 && round >= 6) score -= Math.min(30, (round - 5) * 5);
+      if (posCount >= 1 && round < 13) score += 90;
+    }
+    if (player.pos === "TE") {
+      if (round <= 2) score += 24;
+      if (posCount === 0 && round >= 7) score -= 20;
+      if (posCount >= 1 && round < 13) score += 75;
+    }
+    if (["K", "DST"].includes(player.pos)) {
+      if (round < 13) score += 350;
+      if (round >= 15 && posCount === 0) score -= 70;
+    }
+    return { player, score };
+  });
+  scored.sort((a, b) => a.score - b.score || Number(a.player.adp || 9999) - Number(b.player.adp || 9999));
+  return scored[0]?.player;
+}
+
 function toast(message, danger = false) {
   const element = $("#toast");
   element.textContent = message;
@@ -84,9 +148,23 @@ function renderStatus() {
   }
   $("#clock-summary").textContent = `#${slot.overall} · ${slot.team.team}`;
   $("#on-clock-team").textContent = `${slot.team.team} is on the clock`;
-  $("#on-clock-detail").textContent = `${slot.team.manager} · scheduled R${slot.round}P${slot.pick} · overall #${slot.overall}`;
+  const control = cpuMode === "automatic" ? slot.team.id === selectedTeamId ? "your selection" : "CPU selecting" : "manual selection";
+  $("#on-clock-detail").textContent = `${slot.team.manager} · scheduled R${slot.round}P${slot.pick} · overall #${slot.overall} · ${control}`;
   $("#round-number").textContent = slot.round;
   $("#round-pick").textContent = `Mock pick ${board.picks.length + 1} of ${MOCK_SELECTIONS}`;
+}
+
+function renderCpuControls() {
+  document.querySelectorAll("[data-cpu-mode]").forEach((button) => {
+    const active = button.dataset.cpuMode === cpuMode;
+    button.classList.toggle("active", active);
+    button.setAttribute("aria-pressed", String(active));
+  });
+  const team = board.teams.find((item) => item.id === selectedTeamId) || board.teams[0];
+  $("#roster-team-label").textContent = cpuMode === "automatic" ? "VIEW / CONTROL" : "VIEW TEAM";
+  $("#cpu-mode-note").textContent = cpuMode === "automatic"
+    ? `${team.team} is under your control. The other 11 teams draft automatically until your next turn.`
+    : "You control every team and make every selection. No CPU picks run in the background.";
 }
 
 function renderRosterSelector() {
@@ -175,10 +253,11 @@ function renderPlayers() {
     .filter((player) => !query || `${player.name} ${player.team} ${player.pos} ${player.posRank || ""}`.toLowerCase().includes(query))
     .sort(comparePlayers);
   const current = nextSlot();
+  const cpuTurn = isAutomaticCpuTurn();
   $("#player-result-count").textContent = `Showing ${matches.length} available players`;
   $("#player-table-body").innerHTML = matches.map((player) => {
     return `<tr>
-      <td><button class="remove-button" data-player-id="${escapeHTML(player.id)}"><b>DRAFT</b><small>${current ? `Pick #${current.overall}` : "Complete"}</small></button></td>
+      <td><button class="remove-button" data-player-id="${escapeHTML(player.id)}" ${cpuTurn ? "disabled" : ""}><b>${cpuTurn ? "CPU" : "DRAFT"}</b><small>${cpuTurn ? "Selecting…" : current ? `Pick #${current.overall}` : "Complete"}</small></button></td>
       <td><div class="player-identity"><span class="player-photo" style="background-image:url('${playerPhoto(player)}')"><i>${escapeHTML(player.pos)}</i></span><span><b>${escapeHTML(player.name)}</b><small>${escapeHTML(player.team)}</small></span></div></td>
       <td><i class="pos pos-${escapeHTML(player.pos)}">${escapeHTML(player.pos)}</i></td>
       <td><b>${format(player.adp)}</b></td><td><div class="espn-stat-line">${projectedStatLine(player)}</div></td>
@@ -215,14 +294,33 @@ function renderMethodology() {
 }
 
 function render() {
-  renderStatus(); renderRosterSelector(); renderRoster(); renderRecent(); renderPlayerHead(); renderPlayers(); renderBoard(); renderOrder(); renderMethodology();
+  renderStatus(); renderRosterSelector(); renderCpuControls(); renderRoster(); renderRecent(); renderPlayerHead(); renderPlayers(); renderBoard(); renderOrder(); renderMethodology();
+  queueCpuPick();
 }
 
-async function commitPicks(nextPicks, successMessage) {
+async function commitPicks(nextPicks, successMessage = "") {
   board = { ...board, picks: nextPicks, revision: Number(board.revision || 0) + 1, updatedAt: new Date().toISOString() };
   localStorage.setItem("nyfl-mock-draft-2026", JSON.stringify({ picks: board.picks, revision: board.revision, updatedAt: board.updatedAt }));
-  toast(successMessage);
+  if (successMessage) toast(successMessage);
   render();
+}
+
+function queueCpuPick() {
+  clearTimeout(cpuTimer);
+  if (!isAutomaticCpuTurn() || cpuBusy) return;
+  cpuTimer = setTimeout(runCpuPick, CPU_PICK_DELAY);
+}
+
+async function runCpuPick() {
+  if (!isAutomaticCpuTurn() || cpuBusy) return;
+  const slot = nextSlot();
+  const player = slot ? chooseCpuPlayer(slot) : null;
+  if (!slot || !player) return;
+  cpuBusy = true;
+  const nextPicks = [...board.picks, { teamId: slot.team.id, round: slot.round, player: player.name, pos: player.pos, nflTeam: player.team }];
+  await commitPicks(nextPicks);
+  cpuBusy = false;
+  queueCpuPick();
 }
 
 document.querySelectorAll("[data-view]").forEach((button) => button.addEventListener("click", () => {
@@ -235,7 +333,17 @@ document.querySelectorAll("[data-view]").forEach((button) => button.addEventList
 $("#roster-team-select").addEventListener("change", (event) => {
   selectedTeamId = event.target.value;
   localStorage.setItem("nyfl-roster-team", selectedTeamId);
-  renderRoster();
+  render();
+});
+
+document.querySelector(".cpu-mode-switch").addEventListener("click", (event) => {
+  const button = event.target.closest("[data-cpu-mode]");
+  if (!button || button.dataset.cpuMode === cpuMode) return;
+  clearTimeout(cpuTimer);
+  cpuMode = button.dataset.cpuMode;
+  localStorage.setItem("nyfl-cpu-mode", cpuMode);
+  render();
+  toast(cpuMode === "automatic" ? "Automatic CPUs enabled." : "CPU drafting paused. Manual control enabled.");
 });
 
 $("#player-search").addEventListener("input", renderPlayers);
@@ -257,6 +365,7 @@ $("#player-table-body").addEventListener("click", async (event) => {
   const player = players.find((item) => item.id === button.dataset.playerId);
   const slot = nextSlot();
   if (!player || !slot) return toast("The draft is complete.", true);
+  if (isAutomaticCpuTurn()) return toast("The CPU is making this selection. Switch to Manual CPUs to take over.", true);
   const nextPicks = [...board.picks, { teamId: slot.team.id, round: slot.round, player: player.name, pos: player.pos, nflTeam: player.team }];
   await commitPicks(nextPicks, `${player.name} recorded for ${slot.team.team}.`);
 });

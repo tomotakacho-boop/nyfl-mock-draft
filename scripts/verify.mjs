@@ -39,11 +39,13 @@ if (removedSurfaces.some((phrase) => markup.includes(phrase) || client.includes(
 if (!markup.includes('id="roster-team-select"')) throw new Error("The manager roster selector is missing.");
 if (!markup.includes('data-view="methods"') || !markup.includes('id="methods-view"')) throw new Error("The methodology and sources tab is missing.");
 if (!markup.includes('id="player-pool-section"') || !markup.includes('id="board-section"')) throw new Error("The player pool or full reference board is missing.");
+if (!markup.includes('data-cpu-mode="automatic"') || !markup.includes('data-cpu-mode="manual"')) throw new Error("The automatic/manual CPU controls are missing.");
 if (markup.includes('id="board-section" hidden')) throw new Error("The full reference board must remain visible during the mock.");
 if (!client.includes('board-pos-${position}') || !client.includes('$("#player-pool-section").hidden = isComplete')) throw new Error("Position-colored board cells or completion switching are missing.");
+if (!client.includes("function chooseCpuPlayer") || !client.includes("function queueCpuPick") || !client.includes('localStorage.setItem("nyfl-cpu-mode"')) throw new Error("The persistent CPU mode or automated selection engine is missing.");
 if (markup.includes("/api/board") || client.includes("/api/board")) throw new Error("The browser-local mock still references the old shared-board API.");
 
 const keeperNames = ["Jaxon Smith-Njigba", "Brock Bowers", "Woody Marks"];
 if (!keeperNames.every((name) => client.includes(name))) throw new Error("The Twin Bowers keepers are incomplete.");
 
-console.log(`Verified browser-local NYFL mock with ${players.length} allowlisted players, ${methodology.espnAdpCount} ESPN ADPs, manager roster switching, and a methodology tab.`);
+console.log(`Verified browser-local NYFL mock with ${players.length} allowlisted players, ${methodology.espnAdpCount} ESPN ADPs, automatic/manual CPUs, manager roster switching, and a methodology tab.`);

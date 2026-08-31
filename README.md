@@ -7,6 +7,8 @@ A separate, shareable NYFL mock-draft site. Every visitor runs an independent mo
 - Official 12-team NYFL draft order
 - All 36 locked 2026 keepers and their rounds
 - Browser-local drafting, undo, reset, current clock, recent picks, full board, and team roster selector
+- A persistent Automatic CPUs / Manual CPUs toggle
+- Automatic opponents driven by ESPN ADP, roster needs, position caps, and controlled variation
 - A fixed-height, internally scrollable available-player pool during the mock
 - A position-colored full mock board that remains visible at the bottom throughout the draft
 - An automatic completion view that hides the available-player pool while leaving the completed board visible
@@ -19,6 +21,8 @@ The repository does **not** contain personal notes, watchlist labels, player fla
 ## How mock state works
 
 Selections are saved to the browser’s `localStorage`. There are no host controls, edit keys, server functions, or shared state. Opening the site on another device starts a separate mock draft.
+
+The CPU mode is browser-local too. In **Automatic CPUs**, the team selected in the roster control is the human team and the other 11 teams draft automatically. In **Manual CPUs**, the user makes every selection.
 
 ## Deploy to GitHub and Netlify
 

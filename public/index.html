@@ -37,10 +37,19 @@
         <section class="live-roster-bar" aria-labelledby="roster-heading">
           <header>
             <div><p class="eyebrow">CURRENT MOCK ROSTER</p><h2 id="roster-heading">Choose your team</h2></div>
-            <label><span>VIEW TEAM</span><select id="roster-team-select" aria-label="Select a team"></select></label>
+            <label><span id="roster-team-label">VIEW TEAM</span><select id="roster-team-select" aria-label="Select a team"></select></label>
             <div class="roster-needs"><span>OPEN STARTERS</span><div id="roster-needs"></div></div>
           </header>
           <div class="roster-cells" id="roster-cells"></div>
+        </section>
+
+        <section class="cpu-mode-bar" aria-labelledby="cpu-mode-heading">
+          <div><p class="eyebrow">CPU CONTROL</p><strong id="cpu-mode-heading">Choose how opponent picks work</strong></div>
+          <div class="cpu-mode-switch" role="group" aria-label="CPU draft mode">
+            <button type="button" data-cpu-mode="automatic">Automatic CPUs</button>
+            <button type="button" data-cpu-mode="manual">Manual CPUs</button>
+          </div>
+          <p id="cpu-mode-note">Manual mode lets you make every selection.</p>
         </section>
 
         <section class="command-card">
@@ -111,6 +120,11 @@
           <section class="method-card">
             <p class="eyebrow">2026 PROJECTED STATISTICS</p><h2>Raw opportunity and production—not a private fantasy score</h2>
             <p>Season totals are divided by the provider’s projected games to create the compact per-game lines shown in the player table. Passing, rushing, receiving, kicking, and team-defense categories are displayed as raw statistics. The site does not convert them into NYFL fantasy points or a proprietary player grade.</p>
+          </section>
+
+          <section class="method-card">
+            <p class="eyebrow">AUTOMATIC CPU PICKS</p><h2>ESPN market price with roster guardrails</h2>
+            <p>Automatic mode drafts for every team except the manager selected in the roster control. CPU choices start with ESPN ADP, then apply basic roster construction: required starters must be filled, position caps are respected, duplicate quarterbacks and tight ends are discouraged early, and kickers and defenses are delayed until the closing rounds. Small controlled variation keeps mocks from repeating exactly. Manual mode makes no automated selections.</p>
           </section>
 
           <section class="method-card">
