@@ -8,7 +8,7 @@ A separate, shareable NYFL mock-draft site. Every visitor runs an independent mo
 - All 36 locked 2026 keepers and their rounds
 - Browser-local drafting, undo, reset, current clock, recent picks, full board, and team roster selector
 - A pre-draft setup flow: choose a manager, choose Automatic or Manual CPUs, then press Start draft
-- Automatic opponents driven by the original board’s seeded personality engine, ESPN ADP, roster deadlines, position caps, and controlled variation
+- Automatic opponents that deterministically select the best available player by ESPN ADP, subject only to hard roster limits
 - Automatic reset to overall pick #1 whenever the controlled manager changes
 - A fixed-height, internally scrollable available-player pool during the mock
 - A position-colored full mock board that remains visible at the bottom throughout the draft
@@ -25,7 +25,7 @@ Selections are saved to the browser’s `localStorage`. There are no host contro
 
 The CPU mode is browser-local too. No picks occur during setup. In **Automatic CPUs**, the team selected in the roster control is the human team and the other 11 teams draft automatically after **Start draft** is pressed. In **Manual CPUs**, the user makes every selection after starting. Changing the selected team clears the current mock and returns the board to pick #1.
 
-Automatic opponents use the same strategy family as the original private board: each CPU receives a seeded archetype and a mostly chalk creativity score, with only one or two more adventurous rooms per run. Every pick begins with the available players sorted by valid ESPN ADP; missing ADPs are sent to the back of the market. The engine then selects from a small viable window after applying roster-construction guardrails and positional deadlines.
+Automatic opponents use a deterministic chalk rule: select the available player with the lowest valid ESPN ADP. Missing ADPs are sent to the back of the market. There are no personalities, random draws, or weighted strategy windows. A CPU only bypasses the top ADP when its roster has reached that position’s hard cap or when its remaining slots must be used to complete required starter positions.
 
 ## Deploy to GitHub and Netlify
 

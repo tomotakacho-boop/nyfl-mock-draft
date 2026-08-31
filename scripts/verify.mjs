@@ -44,12 +44,12 @@ if (!markup.includes('id="start-draft-button"')) throw new Error("The explicit S
 if (markup.includes('id="board-section" hidden')) throw new Error("The full reference board must remain visible during the mock.");
 if (!client.includes('board-pos-${position}') || !client.includes('$("#player-pool-section").hidden = isComplete')) throw new Error("Position-colored board cells or completion switching are missing.");
 if (!client.includes("function chooseCpuPlayer") || !client.includes("function queueCpuPick") || !client.includes('localStorage.setItem("nyfl-cpu-mode"')) throw new Error("The persistent CPU mode or automated selection engine is missing.");
-if (!client.includes("function seededRandom") || !client.includes("function buildCpuPersonalities") || !client.includes("CPU_ARCHETYPES")) throw new Error("The original strategic CPU personality engine is missing.");
-if (!client.includes("marketAdp(a) - marketAdp(b)") || !client.includes("const windowSize") || !client.includes("forcedPositions")) throw new Error("The CPU market ordering or roster guardrails are incomplete.");
+if (["CPU_ARCHETYPES", "seededRandom", "buildCpuPersonalities", "cpuPersonalities", "draftSeed", "windowSize", "Math.random"].some((phrase) => client.includes(phrase))) throw new Error("Personality, randomness, or weighted-window CPU logic remains in the public mock.");
+if (!client.includes("marketAdp(a) - marketAdp(b)") || !client.includes("return viable[0]") || !client.includes("missingRequiredPositions")) throw new Error("The deterministic ESPN-ADP CPU ordering or legal-roster safeguard is incomplete.");
 if (!client.includes("if (!draftStarted) return") || !client.includes("returnToSetup(\"Team changed.")) throw new Error("Start gating or manager-change reset is missing.");
 if (markup.includes("/api/board") || client.includes("/api/board")) throw new Error("The browser-local mock still references the old shared-board API.");
 
 const keeperNames = ["Jaxon Smith-Njigba", "Brock Bowers", "Woody Marks"];
 if (!keeperNames.every((name) => client.includes(name))) throw new Error("The Twin Bowers keepers are incomplete.");
 
-console.log(`Verified browser-local NYFL mock with ${players.length} allowlisted players, ${methodology.espnAdpCount} ESPN ADPs, automatic/manual CPUs, manager roster switching, and a methodology tab.`);
+console.log(`Verified browser-local NYFL mock with ${players.length} allowlisted players, ${methodology.espnAdpCount} ESPN ADPs, deterministic chalk/manual CPUs, manager roster switching, and a methodology tab.`);

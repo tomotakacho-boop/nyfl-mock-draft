@@ -3,7 +3,6 @@ const MOCK_SELECTIONS = 156;
 const STARTER_REQUIREMENTS = { QB: 1, RB: 2, WR: 2, TE: 1, FLEX: 1, DST: 1, K: 1 };
 const POSITION_LIMITS = { QB: 2, RB: 6, WR: 6, TE: 2, DST: 1, K: 1 };
 const CPU_PICK_DELAY = 260;
-const CPU_ARCHETYPES = ["Balanced", "RB Aggressor", "WR Wave", "Zero-RB", "Late-QB", "Upside Hunter"];
 
 let board;
 let players = [];
@@ -11,8 +10,6 @@ let methodology = null;
 let selectedTeamId = localStorage.getItem("nyfl-roster-team") || "cho";
 let cpuMode = localStorage.getItem("nyfl-cpu-mode") === "automatic" ? "automatic" : "manual";
 let draftStarted = false;
-let draftSeed = Date.now();
-let cpuPersonalities = [];
 let cpuTimer = null;
 let cpuBusy = false;
 let sortKey = "adp";
@@ -79,93 +76,28 @@ function isAutomaticCpuTurn() {
   return draftStarted && cpuMode === "automatic" && Boolean(slot) && slot.team.id !== selectedTeamId;
 }
 
-function clamp(value, minimum, maximum) {
-  return Math.min(maximum, Math.max(minimum, value));
-}
-
-function seededRandom(seed) {
-  let value = seed >>> 0;
-  return () => {
-    value += 0x6D2B79F5;
-    let result = value;
-    result = Math.imul(result ^ result >>> 15, result | 1);
-    result ^= result + Math.imul(result ^ result >>> 7, result | 61);
-    return ((result ^ result >>> 14) >>> 0) / 4294967296;
-  };
-}
-
-function buildCpuPersonalities(seed) {
-  const random = seededRandom(seed);
-  const opponents = board.teams.filter((team) => team.id !== selectedTeamId);
-  const shuffled = [...opponents];
-  for (let index = shuffled.length - 1; index > 0; index -= 1) {
-    const swap = Math.floor(random() * (index + 1));
-    [shuffled[index], shuffled[swap]] = [shuffled[swap], shuffled[index]];
-  }
-  const creativeTeams = new Set(shuffled.slice(0, random() < 0.55 ? 1 : 2).map((team) => team.id));
-  return board.teams.map((team, index) => ({
-    teamId: team.id,
-    score: team.id === selectedTeamId ? 0 : creativeTeams.has(team.id) ? 68 + Math.round(random() * 18) : 10 + Math.round(random() * 36),
-    archetype: team.id === selectedTeamId ? "Human control" : CPU_ARCHETYPES[(index + Math.floor(random() * CPU_ARCHETYPES.length)) % CPU_ARCHETYPES.length],
-  }));
-}
-
 function chooseCpuPlayer(slot) {
   const used = usedPlayers();
   const entries = teamEntries(slot.team.id);
   const counts = entries.reduce((result, entry) => ({ ...result, [entry.pos]: (result[entry.pos] || 0) + 1 }), {});
-  const personality = cpuPersonalities.find((item) => item.teamId === slot.team.id) || { score: 20, archetype: "Balanced" };
-  const random = seededRandom(draftSeed + slot.overall * 7919 + slot.team.slot);
   const byMarket = players
     .filter((player) => !used.has(player.name.toLowerCase()))
     .sort((a, b) => marketAdp(a) - marketAdp(b) || a.name.localeCompare(b.name));
-  const viable = byMarket.filter((player) => {
-    if (slot.round <= 11 && ["K", "DST"].includes(player.pos)) return false;
-    if (POSITION_LIMITS[player.pos] && (counts[player.pos] || 0) >= POSITION_LIMITS[player.pos]) return false;
-    if (slot.round <= 3 && ["RB", "WR"].includes(player.pos) && (counts[player.pos] || 0) >= 2) return false;
-    if (slot.round <= 5 && ["QB", "TE"].includes(player.pos) && (counts[player.pos] || 0) >= 1) return false;
-    return true;
-  });
+  const viable = byMarket.filter((player) => !POSITION_LIMITS[player.pos] || (counts[player.pos] || 0) < POSITION_LIMITS[player.pos]);
 
-  const missingSpecialists = ["DST", "K"].filter((position) => !(counts[position] || 0));
-  let forcedPositions = [];
-  if (!(counts.QB || 0) && (slot.round >= 10 || entries.length >= 9)) forcedPositions = ["QB"];
-  else if (!(counts.TE || 0) && (slot.round >= 11 || entries.length >= 10)) forcedPositions = ["TE"];
-  else if (slot.round >= 12 && missingSpecialists.length === 2 && entries.length >= 13) forcedPositions = missingSpecialists;
-  else if (slot.round >= 12 && missingSpecialists.length === 1 && entries.length >= 14) forcedPositions = missingSpecialists;
-
-  const logicalPool = forcedPositions.length ? viable.filter((player) => forcedPositions.includes(player.pos)) : viable;
-  const pool = logicalPool.length ? logicalPool : viable.length ? viable : byMarket;
-  const windowSize = Math.round(clamp(4 + personality.score * 0.15, 5, 19));
-  const candidates = pool.slice(0, windowSize);
-  if (!candidates.length) return null;
-
-  const weights = candidates.map((player, index) => {
-    let need = 1;
-    if (player.pos === "RB" && (counts.RB || 0) < 2 && slot.round <= 7) need *= 1.75;
-    if (player.pos === "WR" && (counts.WR || 0) < 2 && slot.round <= 7) need *= 1.75;
-    if (["RB", "WR"].includes(player.pos) && ((counts.RB || 0) + (counts.WR || 0)) < 6 && slot.round >= 6) need *= 1.35;
-    if (player.pos === "QB" && !(counts.QB || 0) && slot.round >= 7) need *= 2.15;
-    if (player.pos === "TE" && !(counts.TE || 0) && slot.round >= 8) need *= 1.95;
-    if (player.pos === "QB" && (counts.QB || 0) === 1) need *= slot.round <= 11 ? 0.38 : 0.65;
-    if (player.pos === "TE" && (counts.TE || 0) >= 1) need *= slot.round <= 9 ? 0.55 : 0.82;
-    if (["RB", "WR"].includes(player.pos) && (counts[player.pos] || 0) >= 4 && slot.round <= 10) need *= 0.62;
-    if (["K", "DST"].includes(player.pos) && slot.round >= 12 && !(counts[player.pos] || 0)) need *= 5;
-    if (personality.archetype === "RB Aggressor" && player.pos === "RB" && slot.round <= 9) need *= 1.55;
-    if (personality.archetype === "WR Wave" && player.pos === "WR" && slot.round <= 9) need *= 1.55;
-    if (personality.archetype === "Zero-RB" && slot.round <= 5) need *= player.pos === "RB" ? 0.48 : ["WR", "TE"].includes(player.pos) ? 1.45 : 1;
-    if (personality.archetype === "Late-QB" && player.pos === "QB") need *= slot.round <= 7 ? 0.18 : !(counts.QB || 0) ? 2.2 : 1;
-    const randomness = 0.85 + random() * 0.3;
-    const rankWeight = Math.exp(-index / (1.4 + personality.score / 17));
-    return Math.max(0.001, need * randomness * rankWeight);
-  });
-  const total = weights.reduce((sum, weight) => sum + weight, 0);
-  let draw = random() * total;
-  for (let index = 0; index < candidates.length; index += 1) {
-    draw -= weights[index];
-    if (draw <= 0) return candidates[index];
+  // Chalk means the lowest available ESPN ADP. The only exception is a hard
+  // roster-completion check when the remaining slots exactly equal the number
+  // of still-missing required starters.
+  const requiredMinimums = { QB: 1, RB: 2, WR: 2, TE: 1, DST: 1, K: 1 };
+  const missingRequiredPositions = Object.entries(requiredMinimums).flatMap(([position, minimum]) =>
+    Array.from({ length: Math.max(0, minimum - (counts[position] || 0)) }, () => position)
+  );
+  const remainingSlots = ROUNDS - entries.length;
+  if (remainingSlots <= missingRequiredPositions.length) {
+    const requiredPool = viable.filter((player) => missingRequiredPositions.includes(player.pos));
+    if (requiredPool.length) return requiredPool[0];
   }
-  return candidates[0];
+  return viable[0] || byMarket[0] || null;
 }
 
 function toast(message, danger = false) {
@@ -222,9 +154,9 @@ function renderCpuControls() {
   startButton.textContent = draftStarted ? "Draft in progress" : "Start draft";
   $("#roster-team-label").textContent = cpuMode === "automatic" ? "VIEW / CONTROL" : "VIEW TEAM";
   $("#cpu-mode-note").textContent = !draftStarted
-    ? `${team.team} will be your mock team. ${cpuMode === "automatic" ? "The original strategic CPU model will run the other 11 teams." : "You will make every selection manually."}`
+    ? `${team.team} will be your mock team. ${cpuMode === "automatic" ? "The other 11 teams will take the best available player by ESPN ADP." : "You will make every selection manually."}`
     : cpuMode === "automatic"
-      ? `${team.team} is under your control. Strategic CPUs run until your next turn.`
+      ? `${team.team} is under your control. Chalk CPUs run until your next turn.`
       : "Manual draft in progress. You control every team and every selection.";
 }
 
@@ -373,7 +305,6 @@ function persistMock() {
     revision: board.revision,
     updatedAt: board.updatedAt,
     started: draftStarted,
-    seed: draftSeed,
   }));
 }
 
@@ -381,8 +312,6 @@ function returnToSetup(message = "Mock reset. Choose a team and mode, then press
   clearTimeout(cpuTimer);
   cpuBusy = false;
   draftStarted = false;
-  draftSeed = Date.now();
-  cpuPersonalities = [];
   board = { ...board, picks: [], revision: Number(board.revision || 0) + 1, updatedAt: null };
   persistMock();
   render();
@@ -434,12 +363,10 @@ document.querySelector(".cpu-mode-switch").addEventListener("click", (event) => 
 $("#start-draft-button").addEventListener("click", () => {
   if (draftStarted) return;
   board = { ...board, picks: [], revision: Number(board.revision || 0) + 1, updatedAt: new Date().toISOString() };
-  draftSeed = Date.now();
-  cpuPersonalities = buildCpuPersonalities(draftSeed);
   draftStarted = true;
   persistMock();
   render();
-  toast(cpuMode === "automatic" ? "Draft started. Strategic CPUs are on." : "Draft started in full manual mode.");
+  toast(cpuMode === "automatic" ? "Draft started. Chalk CPUs will take the best available ESPN ADP." : "Draft started in full manual mode.");
 });
 
 $("#player-search").addEventListener("input", renderPlayers);
@@ -483,8 +410,6 @@ async function start() {
   const supportsSetupFlow = typeof saved?.started === "boolean";
   board = { ...fallbackBoard(), picks: supportsSetupFlow && Array.isArray(saved?.picks) ? saved.picks : [], revision: Number(saved?.revision || 0), updatedAt: supportsSetupFlow ? saved?.updatedAt || null : null };
   draftStarted = supportsSetupFlow && Boolean(saved.started);
-  draftSeed = Number(saved?.seed) || Date.now();
-  cpuPersonalities = buildCpuPersonalities(draftSeed);
   try {
     [players, methodology] = await Promise.all([
       fetch("/data/players.json").then((response) => response.ok ? response.json() : Promise.reject()),
